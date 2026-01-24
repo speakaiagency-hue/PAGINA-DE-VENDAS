@@ -164,37 +164,6 @@ const ProblemsSection: React.FC = () => {
 };
 
 // --- ShowcaseCarousel ---
-const ShowcaseCarousel: React.FC = () => {
-  const items = [
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
-  ];
-  return (
-    <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-          O QUE VOCÊ VAI <br/> CONSEGUIR FAZER?
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {items.map((it, i) => (
-            <div key={i} className="group space-y-3">
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
-                <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// --- SkillsSection ---
 export const ShowcaseCarousel: React.FC = () => {
   const items = [
     { v: "/midia/videos/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
@@ -229,6 +198,41 @@ export const ShowcaseCarousel: React.FC = () => {
               </p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// --- SkillsSection ---
+const SkillsSection: React.FC = () => {
+  const skills = [
+    { id: "01", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0.png", t: "CRIAÇÃO DE INFLUENCER" },
+    { id: "02", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-1.png", t: "O PODER DO PROMPT" },
+    { id: "03", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "RETRATO REALISTA" },
+    { id: "04", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "VOZ E MOVIMENTO" },
+    { id: "05", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-8.png", t: "EXPANSÃO GLOBAL" },
+    { id: "06", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
+  ];
+  return (
+    <section className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto space-y-16">
+        <div className="text-center space-y-2">
+            <span className="text-brand-purple text-[9px] font-black uppercase tracking-[0.4em] italic">ESTRUTURA DA</span>
+            <h2 className="text-4xl md:text-5xl font-black italic text-white tracking-tighter">SPEAK IA</h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+           {skills.map((s, i) => (
+             <div key={i} className="space-y-4 group">
+                <div className={`aspect-[4/5] rounded-2xl overflow-hidden border-2 transition-all duration-500 ${i === 1 ? 'border-brand-cyan shadow-xl shadow-brand-cyan/10' : 'border-white/5 grayscale group-hover:grayscale-0'}`}>
+                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                </div>
+                <div className="text-center">
+                  <span className={`text-4xl font-black italic ${i === 1 ? 'text-brand-cyan' : 'text-zinc-800'}`}>{s.id}</span>
+                  <p className="text-[10px] font-black italic text-white uppercase">{s.t}</p>
+                </div>
+             </div>
+           ))}
         </div>
       </div>
     </section>
