@@ -43,7 +43,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         {/* Logo */}
         <div className="flex items-center gap-3 cursor-pointer z-[10001]" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <img src="https://speakia.ai/wp-content/uploads/2025/11/cropped-SPEAK-AI-Proposta-de-Marca-e1763141139366.png" alt="SPEAK IA" className="h-6 md:h-7 w-auto max-w-full" />
+          <img src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-scaled-e1769270181764.png" alt="SPEAK IA" className="h-6 md:h-7 w-auto max-w-full" />
         </div>
 
         {/* Desktop Navigation */}
@@ -551,7 +551,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-black border-t border-white/5 py-16 px-6 text-center">
       <img 
-        src="https://speakia.ai/wp-content/uploads/2025/11/cropped-SPEAK-AI-Proposta-de-Marca-e1763141139366.png" 
+        src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-scaled-e1769270181764.png" 
         alt="SPEAK IA" 
         className="h-7 mx-auto opacity-80 mb-6"
       />
