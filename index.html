@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPEAK IA – Crie seu Influenciador com IA</title>
+
+  <!-- COLOQUE O LINK DA SUA LOGO (favicon) AQUI -->
+  <link rel="icon" type="image/png" href="https://speakia.ai/wp-content/uploads/2026/01/Logo.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Instrument+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Instrument Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              purple: '#5826fe',
+              blue: '#2d8ff9',
+              cyan: '#39b9fc',
+              offwhite: '#efefec',
+              black: '#000000',
+              problem: '#E31243',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background-color: #000;
+      color: #efefec;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    .aurora-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+      background: #000;
+    }
+
+    .aurora-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(20px);   /* menos difuso */
+      opacity: 0.5;         /* mais visível */
+    }
+
+    ::selection {
+      background-color: #5826fe;
+      color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #222;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #333;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "vite": "https://esm.sh/vite@^7.3.1"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Fundo com vídeo -->
+  <div class="aurora-container">
+    <video autoplay muted loop playsinline class="aurora-video">
+      <source src="https://speakia.ai/wp-content/uploads/2026/01/h7e6um6ebg7g_download.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- React App -->
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
