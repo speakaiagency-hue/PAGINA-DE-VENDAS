@@ -232,10 +232,10 @@ const SkillsSection: React.FC = () => {
 // --- BonusSection ---
 const BonusSection: React.FC = () => {
   const bonus = [
-    { t: "GERADOR DE PROMPT GRATUITO (PRA QUEM NÃO SABE CRIAR)", p: "R$1.997", img: "https://speakia.ai/wp-content/uploads/2026/01/prompt.png" },
-    { t: "CONSULTORIA DE AVALIAÇÃO DO NEGÓCIO", p: "R$10.597", img: "https://speakia.ai/wp-content/uploads/2026/01/CONSULTORIA.png" },
-    { t: "CANAL EXCLUSIVO COM DICAS DE USO, TRENDS E PROMPTS QUE UTILIZAMOS", p: "R$997", img: "https://speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO.png" },
-    { t: "MINI CURSO GRATUITO", p: "R$297", img: "https://speakia.ai/wp-content/uploads/2026/01/MINI-CURSO-GRATUITO.png" }
+    { t: "GERADOR DE PROMPT GRATUITO (PRA QUEM NÃO SABE CRIAR)", p: "R$1.997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/prompt-768x439-1.png" },
+    { t: "CONSULTORIA DE AVALIAÇÃO DO NEGÓCIO", p: "R$10.597", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CONSULTORIA-1024x585-1.png" },
+    { t: "CANAL EXCLUSIVO COM DICAS DE USO, TRENDS E PROMPTS QUE UTILIZAMOS", p: "R$997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
+    { t: "MINI CURSO GRATUITO", p: "R$297", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Captura-de-tela-2026-01-21-194141.png" }
   ];
   return (
     <section className="py-24 px-6 bg-zinc-950/20 overflow-x-hidden">
@@ -415,7 +415,7 @@ const AmbassadorSection: React.FC = () => {
         {/* Foto à esquerda */}
         <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 group shadow-xl">
           <img 
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-7.png" 
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-7-1536x1536-1.png" 
             alt="Embaixador Virtual" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
           />
