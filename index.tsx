@@ -156,7 +156,7 @@ const ProblemsSection: React.FC = () => {
           </h2>
         </div>
         <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl relative">
-          <video src="https://speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4" autoPlay loop muted playsInline className="w-full aspect-video object-cover" />
+          <video src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4" autoPlay loop muted playsInline className="w-full aspect-video object-cover" />
         </div>
       </div>
     </section>
@@ -166,12 +166,12 @@ const ProblemsSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
-    { v: "https://speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
   ];
   return (
     <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
@@ -197,12 +197,12 @@ const ShowcaseCarousel: React.FC = () => {
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
-    { id: "01", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0.png", t: "CRIAÇÃO DE INFLUENCER" },
-    { id: "02", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-1.png", t: "O PODER DO PROMPT" },
-    { id: "03", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "RETRATO REALISTA" },
-    { id: "04", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "VOZ E MOVIMENTO" },
-    { id: "05", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-8.png", t: "EXPANSÃO GLOBAL" },
-    { id: "06", img: "https://speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
+    { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "CRIAÇÃO DE INFLUENCER" },
+    { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "O PODER DO PROMPT" },
+    { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "RETRATO REALISTA" },
+    { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "VOZ E MOVIMENTO" },
+    { id: "05", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-8.png", t: "EXPANSÃO GLOBAL" },
+    { id: "06", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
   ];
   return (
     <section className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
@@ -415,7 +415,7 @@ const AmbassadorSection: React.FC = () => {
         {/* Foto à esquerda */}
         <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 group shadow-xl">
           <img 
-            src="https://speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-7.png" 
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-7.png" 
             alt="Embaixador Virtual" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
           />
@@ -469,7 +469,7 @@ const AuthorSection: React.FC = () => {
         {/* Foto à esquerda */}
         <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 group shadow-xl">
           <img 
-            src="https://speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-5.png" 
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-5.png" 
             alt="Embaixador Virtual" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
           />
