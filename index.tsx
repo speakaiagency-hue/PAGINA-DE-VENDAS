@@ -111,9 +111,9 @@ const Hero: React.FC = () => {
         <div className="relative group w-full">
           <div className="absolute -inset-8 bg-brand-purple/5 blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
-            <video className="w-full h-full object-cover" src="https://ofilmboss.com/wp-content/uploads/2025/12/Video-Montado-V2.mp4" autoPlay loop muted playsInline></video>
+            <video className="w-full h-full object-cover" src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4" autoPlay loop muted playsInline></video>
             <div className="absolute bottom-6 right-6 w-20 h-20 animate-float pointer-events-none">
-               <img src="https://ofilmboss.com/wp-content/uploads/2026/01/selo-2.png" alt="Selo" className="w-full h-full object-contain drop-shadow-lg" />
+               <img src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-1-scaled.png" alt="Selo" className="w-full h-full object-contain drop-shadow-lg" />
             </div>
           </div>
         </div>
