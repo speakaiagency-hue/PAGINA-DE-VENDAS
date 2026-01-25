@@ -205,31 +205,53 @@ const ProblemsSection: React.FC = () => {
     "Outras plataformas são caras pra acessar"
   ];
   return (
-    <section className="py-24 px-6 overflow-x-hidden">
+    <section className="py-24 px-6 overflow-x-hidden relative">
+      {/* Fundo com gradiente neon animado */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 animate-gradient-neon"></div>
+
       <div className="max-w-7xl mx-auto text-center space-y-6">
-        <span className="text-[9px] text-zinc-600 font-black uppercase italic tracking-widest leading-none block">
+        <span className="text-[9px] text-zinc-300 font-black uppercase italic tracking-widest leading-none block drop-shadow-[0_0_8px_rgba(88,38,254,0.8)]">
           SPEAK AI <br /> 2026 //
         </span>
-        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
+        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">
           EXISTEM ALGUNS <br /> PROBLEMAS
         </h2>
       </div>
+
       <div className="max-w-2xl mx-auto mt-12 space-y-2">
         {problems.map((p, i) => (
-          <div key={i} className="bg-zinc-900/30 border border-white/5 p-4 rounded-sm flex items-center gap-4 justify-center group hover:border-brand-problem/40 transition-colors">
-            <span className="text-zinc-700 font-black italic text-sm">0{i + 1}</span>
-            <span className="text-zinc-400 font-bold uppercase italic text-xs md:text-sm">{p}</span>
+          <div
+            key={i}
+            className="bg-black/40 border border-white/10 p-4 rounded-sm flex items-center gap-4 justify-center group hover:border-cyan-400/40 transition-all duration-300 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)]"
+          >
+            <span className="text-purple-400 font-black italic text-sm drop-shadow-[0_0_6px_rgba(88,38,254,0.8)]">
+              0{i + 1}
+            </span>
+            <span className="text-zinc-200 font-bold uppercase italic text-xs md:text-sm">
+              {p}
+            </span>
           </div>
         ))}
       </div>
-      <div id="sobre" className="max-w-7xl mx-auto mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+
+      <div
+        id="sobre"
+        className="max-w-7xl mx-auto mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24"
+      >
         <div className="space-y-6">
-          <h2 className="text-5xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.8] text-white">
-            A <span className="text-brand-cyan">SPEAK AI</span> <br /> EXISTE PARA <br /> RESOLVER ISSO
+          <h2 className="text-5xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.8] text-white drop-shadow-[0_0_15px_rgba(0,200,255,0.8)]">
+            A <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">SPEAK AI</span> <br /> EXISTE PARA <br /> RESOLVER ISSO
           </h2>
         </div>
-        <div className="rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl relative">
-          <video src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4" autoPlay loop muted playsInline className="w-full aspect-video object-cover" />
+        <div className="rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_25px_rgba(0,200,255,0.6)] relative">
+          <video
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full aspect-video object-cover"
+          />
         </div>
       </div>
     </section>
