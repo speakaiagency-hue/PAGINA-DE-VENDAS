@@ -355,6 +355,75 @@ const BonusSection: React.FC = () => {
   );
 };
 
+// Academy Section definida internamente para fidelidade de estrutura
+const AcademySection: React.FC = () => {
+  const academyImages = [
+    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-164.png", label: "METODOLOGIA PRÁTICA" },
+    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-165.png", label: "IA GENERATIVA" },
+    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-162.png", label: "MONETIZAÇÃO" },
+    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-163.png", label: "ESCALE SEU NEGÓCIO" }
+  ];
+
+  return (
+    <section id="academy" className="relative py-20 md:py-28 px-6 overflow-hidden bg-black border-t border-white/5">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/10 blur-[120px] rounded-full opacity-30"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col items-center text-center space-y-12">
+          <div className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-purple/40 bg-brand-purple/10 backdrop-blur-md">
+               <span className="text-lg">🚀</span>
+               <span className="text-brand-cyan font-black text-[9px] md:text-[10px] tracking-[0.3em] uppercase italic">ACADEMY PROGRAM</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.9] text-white">
+              DO ZERO AO <br />
+              <span className="text-brand-purple">AVANÇADO</span>
+            </h2>
+          </div>
+
+          <div className="max-w-xl">
+            <p className="text-zinc-500 text-sm md:text-base font-bold italic leading-tight">
+              O treinamento definitivo para quem deseja dominar o mercado de influenciadores virtuais e inteligência artificial.
+            </p>
+          </div>
+
+          <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-3 md:gap-5 w-full max-w-5xl py-4">
+            {academyImages.map((item, i) => (
+              <div key={i} className="group relative w-[calc(50%-0.75rem)] md:w-1/4 aspect-[4/5] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900/40 transition-all duration-500 hover:border-brand-purple/50">
+                <img 
+                  src={item.img} 
+                  alt={item.label} 
+                  className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                  <span className="text-white font-black italic uppercase text-[8px] md:text-[9px] tracking-widest leading-none border-l-2 border-brand-purple pl-2">
+                    {item.label}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-6 w-full flex flex-col items-center">
+            <a 
+              href="#oferta" 
+              className="inline-block bg-brand-purple text-white px-10 md:px-14 py-4 md:py-5 text-base md:text-lg font-black italic uppercase tracking-tighter shadow-[0_15px_30px_rgba(88,38,254,0.3)] hover:bg-brand-blue hover:scale-105 transition-all active:scale-95"
+            >
+              QUERO COMEÇAR AGORA
+            </a>
+            <p className="text-zinc-700 text-[9px] font-bold uppercase italic tracking-widest mt-6 opacity-50">
+              Acesso imediato à plataforma Speak IA Academy
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // --- PricingSection ---
 const PricingSection: React.FC = () => {
   const plans = [
@@ -660,6 +729,7 @@ const App: React.FC = () => {
         <ShowcaseCarousel /> 
         <SkillsSection />
         <BonusSection />
+        <AcademySection />
         <PricingSection />
         <AmbassadorSection />
         <AuthorSection />
