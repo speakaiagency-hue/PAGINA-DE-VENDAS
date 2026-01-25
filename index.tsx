@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
             <a href="https://app.speakia.ai/" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center">
               <div className="absolute -inset-1 bg-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative inline-flex bg-brand-purple hover:bg-brand-blue text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
-                ASSINAR PLANO
+                SPEAK AI ACADEMY
               </span>
             </a>
           </div>
@@ -375,7 +375,7 @@ const AcademySection: React.FC = () => {
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-purple/40 bg-brand-purple/10 backdrop-blur-md">
                <span className="text-lg">🚀</span>
-               <span className="text-brand-cyan font-black text-[9px] md:text-[10px] tracking-[0.3em] uppercase italic">ACADEMY PROGRAM</span>
+               <span className="text-brand-cyan font-black text-[9px] md:text-[10px] tracking-[0.3em] uppercase italic">SPEAK AI ACADEMY</span>
             </div>
             
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.9] text-white">
