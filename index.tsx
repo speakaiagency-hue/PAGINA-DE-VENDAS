@@ -593,13 +593,15 @@ const FAQ: React.FC = () => {
     { q: "1. O QUE É SPEAK AI?", a: "A Speak AI é uma plataforma inteligente que permite qualquer pessoa criar sua própria influenciadora digital, produzir vídeos, conteúdos e automações completas usando inteligência artificial — tudo de forma simples, rápida e sem precisar aparecer." },
     { q: "2. PRECISO SABER PROGRAMAR PARA USAR A SPEAK AI?", a: "Não. Você não precisa saber programar nem entender de tecnologia avançada para usar a Speak AI. A plataforma foi criada para qualquer pessoa, mesmo totalmente leiga em IA." },
     { q: "3. COMO FUNCIONAM OS CRÉDITOS?", a: "Os créditos são a 'moeda interna' da Speak AI. Cada ação dentro da plataforma utiliza uma pequena quantidade de créditos. Você compra um pacote e usa conforme precisar." },
-    { q: "4. MEUS DADOS ESTÃO SEGUROS?", a: "Sim. Utilizamos criptografia, servidores seguros e políticas rígidas de privacidade. Nada do que você cria é compartilhado com terceiros." },
-    { q: "5. EU SOU DONO DOS AVATARES, VÍDEOS OU QUALQUER MATERIAL QUE EU CRIO?", a: "Sim. Todo conteúdo que você cria pertence 100% a você e pode ser usado comercialmente." },
+    { q: "4. QUAL É A DIFERENÇA DOS PLANOS E DO ACADEMY?", a: "A Speak AI Academy é um sistema de treinamentos criados para você começar do absoluto zero. Pra você que não entende muito bem de internet e inteligência artificial, dessa forma você vai aprender tudo bem detalhado e explicadinho, sem dificuldade. Vai poder criar de forma rápida e simples influenciadores realistas e conteúdos profissionais com os nossos prompts personalizados e nossa ajuda no Suporte individual.  Já a nossa ferramenta Speak AI é onde de fato você vai aplicar todo esse conhecimento. É uma ferramenta que foi desenvolvida por para ser muito mais fácil e acessível do que qualquer outra. Nela o pagamento é feito mensalmente, com valores a partir de 97 reais, onde você pode cancelar a qualquer momento." },
+    { q: "5. E QUAL É A DIFERENÇA DA FERRAMENTA SPEAK AI PARA O CHAT GPT, GEMINI, E TODAS AS OUTRAS DO MERCADO?", a: "É simples, a principal diferença está na facilidade no uso da ferramenta. Ela foi criada para pessoas que não sabem nada de internet e inteligência artificial. Você não precisa entender de prompts de comando, nós criamos um gerador de prompt pra você! Além do fato dela ser muito mais acessível que todas essas plataformas." },
     { q: "6. PRECISO APARECER NOS VÍDEOS?", a: "Não. Você pode criar influenciadores e vídeos totalmente sem rosto usando IA." },
     { q: "7. POSSO USAR OS AVATARES PARA REPRESENTAR MINHA MARCA?", a: "Sim. Você pode criar influenciadores digitais personalizados para sua marca ou empresa." },
     { q: "8. COMO FUNCIONA PARA QUEM VENDE PRODUTOS?", a: "A plataforma ajuda você a criar conteúdos que vendem: vídeos, influenciadores digitais apresentando produtos, roteiros de anúncios e campanhas completas." },
     { q: "9. A SPEAK AI FUNCIONA NO CELULAR?", a: "Sim. Funciona no celular, computador ou tablet — basta ter acesso à internet." },
-    { q: "10. A SPEAK AI OFERECE SUPORTE?", a: "Sim! Você terá acesso a suporte humano, materiais educativos e comunidade exclusiva." }
+    { q: "10. MEUS DADOS ESTÃO SEGUROS?", a: "Sim. Utilizamos criptografia, servidores seguros e políticas rígidas de privacidade. Nada do que você cria é compartilhado com terceiros." }
+    { q: "11. A SPEAK AI OFERECE SUPORTE?", a: "Sim! Você terá acesso a suporte humano, materiais educativos e comunidade exclusiva." }
+    { q: "12. EU SOU DONO DOS AVATARES, VÍDEOS OU QUALQUER MATERIAL QUE EU CRIO?"", a: "Sim. Todo conteúdo que você cria pertence 100% a você e pode ser usado comercialmente." }
   ];
 
   return (
