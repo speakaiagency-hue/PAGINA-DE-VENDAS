@@ -668,8 +668,8 @@ const FAQ: React.FC = () => {
     { q: "7. POSSO USAR OS AVATARES PARA REPRESENTAR MINHA MARCA?", a: "Sim. Você pode criar influenciadores digitais personalizados para sua marca ou empresa." },
     { q: "8. COMO FUNCIONA PARA QUEM VENDE PRODUTOS?", a: "A plataforma ajuda você a criar conteúdos que vendem: vídeos, influenciadores digitais apresentando produtos, roteiros de anúncios e campanhas completas." },
     { q: "9. A SPEAK AI FUNCIONA NO CELULAR?", a: "Sim. Funciona no celular, computador ou tablet — basta ter acesso à internet." },
-    { q: "10. MEUS DADOS ESTÃO SEGUROS?", a: "Sim. Utilizamos criptografia, servidores seguros e políticas rígidas de privacidade. Nada do que você cria é compartilhado com terceiros." }
-    { q: "11. A SPEAK AI OFERECE SUPORTE?", a: "Sim! Você terá acesso a suporte humano, materiais educativos e comunidade exclusiva." }
+    { q: "10. MEUS DADOS ESTÃO SEGUROS?", a: "Sim. Utilizamos criptografia, servidores seguros e políticas rígidas de privacidade. Nada do que você cria é compartilhado com terceiros." },
+    { q: "11. A SPEAK AI OFERECE SUPORTE?", a: "Sim! Você terá acesso a suporte humano, materiais educativos e comunidade exclusiva." },
     { q: "12. EU SOU DONO DOS AVATARES, VÍDEOS OU QUALQUER MATERIAL QUE EU CRIO?", a: "Sim. Todo conteúdo que você cria pertence 100% a você e pode ser usado comercialmente." }
   ];
 
