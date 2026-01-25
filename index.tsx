@@ -431,7 +431,7 @@ const PricingSection: React.FC = () => {
       title: "Básico",
       subtitle: "Perfeito para iniciantes - 500 créditos",
       price: "97,00",
-      link: "https://pay.kiwify.com.br/jM0siPY",
+      link: "https://pay.kiwify.com.br/PT39XnT",
       features: [
         "Chat IA ilimitado",
         "Gerador de Prompt",
