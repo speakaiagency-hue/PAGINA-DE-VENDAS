@@ -39,96 +39,94 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-[500] transition-all duration-300 overflow-x-hidden ${
-        scrolled
-          ? 'bg-black/95 backdrop-blur-2xl py-3'
-          : 'bg-transparent py-6'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
-        {/* Logo */}
-        <div
-          className="flex items-center gap-3 cursor-pointer z-[10001]"
-          onClick={() => {
-            setIsMenuOpen(false);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
-          <img
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-scaled-e1769270181764.png"
-            alt="SPEAK IA"
-            className="h-6 md:h-7 w-auto max-w-full"
-          />
-        </div>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-[500] transition-all duration-300 overflow-x-hidden ${
+          scrolled
+            ? 'bg-black/95 backdrop-blur-2xl py-3'
+            : 'bg-transparent py-6'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+          {/* Logo */}
+          <div
+            className="flex items-center gap-3 cursor-pointer z-[10001]"
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            <img
+              src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-scaled-e1769270181764.png"
+              alt="SPEAK IA"
+              className="h-6 md:h-7 w-auto max-w-full"
+            />
+          </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          {['INÍCIO', 'SOBRE', 'CONTEÚDO', 'FAQ'].map((item) => (
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            {['INÍCIO', 'SOBRE', 'CONTEÚDO', 'FAQ'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollTo(item.toLowerCase())}
+                className="text-white/50 hover:text-white transition-colors text-[9px] font-black italic uppercase tracking-[0.2em]"
+              >
+                {item}
+              </button>
+            ))}
             <button
-              key={item}
-              onClick={() => scrollTo(item.toLowerCase())}
-              className="text-white/50 hover:text-white transition-colors text-[9px] font-black italic uppercase tracking-[0.2em]"
+              onClick={() => scrollTo('planos')}
+              className="bg-brand-purple/20 border border-brand-purple/50 text-white hover:bg-brand-purple/40 hover:border-brand-purple px-4 py-1.5 text-[9px] font-black italic uppercase tracking-[0.2em] rounded-sm transition-all shadow-[0_0_15px_rgba(88,38,254,0.1)] hover:scale-105"
             >
-              {item}
+              PLANOS
             </button>
-          ))}
+          </nav>
+
+          {/* Desktop Access Button */}
+          <div className="hidden lg:block z-[501]">
+            <a
+              href="https://app.speakia.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-purple hover:bg-brand-blue text-white px-5 py-2.5 text-[9px] font-black italic uppercase tracking-wider transition-all hover:scale-105 rounded-sm shadow-lg"
+            >
+              ACESSAR PLATAFORMA
+            </a>
+          </div>
+
+          {/* Mobile Menu Toggle */}
           <button
-            onClick={() => scrollTo('planos')}
-            className="bg-brand-purple/20 border border-brand-purple/50 text-white hover:bg-brand-purple/40 hover:border-brand-purple px-4 py-1.5 text-[9px] font-black italic uppercase tracking-[0.2em] rounded-sm transition-all shadow-[0_0_15px_rgba(88,38,254,0.1)] hover:scale-105"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden relative z-[10001] p-2 flex flex-col items-center justify-center gap-1.5 w-10 h-10"
           >
-            PLANOS
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? 'rotate-45 translate-y-[4px]' : ''
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? 'opacity-0' : ''
+              }`}
+            ></span>
+            <span
+              className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+                isMenuOpen ? '-rotate-45 -translate-y-[10px]' : ''
+              }`}
+            ></span>
           </button>
-        </nav>
-
-        {/* Desktop Access Button */}
-        <div className="hidden lg:block z-[501]">
-          <a
-            href="https://app.speakia.ai/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-brand-purple hover:bg-brand-blue text-white px-5 py-2.5 text-[9px] font-black italic uppercase tracking-wider transition-all hover:scale-105 rounded-sm shadow-lg"
-          >
-            ACESSAR PLATAFORMA
-          </a>
         </div>
+      </header>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden relative z-[10001] p-2 flex flex-col items-center justify-center gap-1.5 w-10 h-10"
-        >
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? 'rotate-45 translate-y-[4px]' : ''
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? 'opacity-0' : ''
-            }`}
-          ></span>
-          <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
-              isMenuOpen ? '-rotate-45 -translate-y-[10px]' : ''
-            }`}
-          ></span>
-        </button>
-
-        {/* Mobile Fullscreen Menu */}
-        <div
-          className={`lg:hidden fixed inset-0 h-screen overflow-y-auto bg-black z-[10000] flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${
-            isMenuOpen
-              ? 'translate-y-0 opacity-100 visible'
-              : '-translate-y-full opacity-0 invisible'
-          }`}
-        >
+      {/* Popup Menu Mobile */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-black z-[10000] flex flex-col items-center justify-center">
           <div className="flex flex-col gap-10 text-center px-6 w-full max-w-xs">
             {['INÍCIO', 'SOBRE', 'CONTEÚDO', 'FAQ'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollTo(item.toLowerCase())}
-                className="text-white/60 hover:text-white text-3xl font-black italic uppercase tracking-[0.2em] transition-colors"
+                className="text-white/80 hover:text-white text-3xl font-black italic uppercase tracking-[0.2em] transition-colors"
               >
                 {item}
               </button>
@@ -151,8 +149,8 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      )}
+    </>
   );
 };
 
