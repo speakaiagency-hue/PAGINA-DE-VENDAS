@@ -415,7 +415,7 @@ const AmbassadorSection: React.FC = () => {
         {/* Foto à esquerda */}
         <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 group shadow-xl">
           <img 
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-7-1536x1536-1.png" 
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Beige-Grey-Neutral-Minimal-Paper-Daily-Motivation-Quote-Your-Story-Video-para-Facebook.png" 
             alt="Embaixador Virtual" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
           />
@@ -425,25 +425,17 @@ const AmbassadorSection: React.FC = () => {
         <div className="w-full max-w-lg space-y-6 mx-auto">
           <div className="space-y-3">
             <span className="text-brand-purple text-xs font-black uppercase tracking-[0.3em] italic">
-              BELLA FALCONI
+             EMBAIXADORA <span className="text-brand-cyan">SPEAK AI</span>
             </span>
             <h2 className="text-2xl md:text-3xl font-black italic tracking-tight text-white uppercase">
-              EMBAIXADORA <span className="text-brand-cyan">SPEAK IA</span>
+              BELLA FALCONI 
             </h2>
           </div>
 
           <div className="space-y-4 text-justify">
             <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Reconhecida como uma das maiores referências do Brasil nas categorias luxo, beleza e fitness, Bella Falconi construiu uma trajetória sólida de sucesso, influência e credibilidade no mercado digital e empresarial. Seu impacto é refletido em uma audiência de mais de 4 milhões de seguidores e em sua presença constante entre os principais nomes do empreendedorismo moderno.
-            </p>
-            <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Seu trabalho e relevância a levaram a integrar a prestigiada lista Forbes 30 Under 30, reconhecimento reservado a jovens líderes que transformam mercados e criam negócios de alto impacto.
-            </p>
-            <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Muito além da influência, Bella é empresária consolidada, com forte atuação na construção de marcas, posicionamento premium e comunidades altamente engajadas, sempre conectando performance, estética, disciplina e visão estratégica.
-            </p>
-             <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Sua conexão com a Speak AI nasce da compreensão de que a Inteligência Artificial é o próximo grande pilar dos negócios, especialmente para quem busca escala, eficiência e liberdade sem abrir mão de autenticidade. A tecnologia passa a ser uma aliada estratégica para ampliar resultados e impacto de forma inteligente.
+          Pioneira nas redes sociais e influenciadora digital há mais de 12 anos, Bella é empresária, palestrante, mestre em nutrição, pós graduada em Teologia e autora de 4 livros. É também referência no mundo digital e foi eleita pela Forbes como uma das principais influenciadoras do Brasil na lista "Forbes Under 30".
+Muito além da influência, Bella é empresária consolidada, com forte atuação na construção de marcas, posicionamento premium e comunidades altamente engajadas, sempre conectando performance, estética, disciplina e visão estratégica.
             </p>
             <p className="text-zinc-500 text-xs md:text-sm font-medium leading-relaxed italic border-l-2 border-brand-purple pl-4">
               Como Embaixadora da Speak AI, Bella Falconi representa a união entre autoridade, inovação e futuro, ajudando a posicionar a Inteligência Artificial como uma ferramenta essencial para pessoas e empresas que querem crescer de forma estruturada e sustentável.
@@ -470,7 +462,7 @@ const AuthorSection: React.FC = () => {
         <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 group shadow-xl">
           <img 
             src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-5.png" 
-            alt="Embaixador Virtual" 
+            alt="co-founder Lucas" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
           />
         </div>
@@ -479,25 +471,20 @@ const AuthorSection: React.FC = () => {
         <div className="w-full max-w-lg space-y-6 mx-auto">
           <div className="space-y-3">
             <span className="text-brand-purple text-xs font-black uppercase tracking-[0.3em] italic">
-              QUEM É LUCAS ZANARDO?
+            CO-FOUNDER <span className="text-brand-cyan">SPEAK AI</span>
             </span>
             <h2 className="text-2xl md:text-3xl font-black italic tracking-tight text-white uppercase">
-              Fundador da <span className="text-brand-cyan">SPEAK IA</span>
+            QUEM É LUCAS ZANARDO? 
             </h2>
           </div>
 
           <div className="space-y-4 text-justify">
             <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Empresário, investidor e estrategista em Inteligência Artificial, Lucas Zanardo iniciou sua trajetória empreendedora ainda aos 16 anos de idade. Hoje, aos 32 anos, soma mais de 15 anos de experiência liderando equipes e grandes organizações.
-            </p>
-            <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Ao longo da carreira, tornou-se referência em estruturação de times comerciais e desenvolvimento de líderes, acumulando mais de R$ 800 milhões em vendas geradas por equipes que ele próprio formou, treinou e liderou.
-            </p>
-            <p className="text-zinc-400 text-sm md:text-base font-bold italic leading-snug">
-              Esportista por paixão e empreendedor por essência, construiu sua trajetória baseada em disciplina, performance e visão estratégica. Pioneiro na aplicação prática da Inteligência Artificial nos negócios.
+    Empresário, investidor e estrategista em Inteligência Artificial, Lucas Zanardo iniciou sua trajetória empreendedora ainda aos 16 anos de idade. Hoje, aos 32 anos, soma mais de 15 anos de experiência liderando equipes e grandes organizações.
+Ao longo da carreira, tornou-se referência em estruturação de times comerciais e desenvolvimento de líderes, acumulando mais de R$ 800 milhões em vendas geradas por equipes que ele próprio formou, treinou e liderou.
             </p>
             <p className="text-zinc-500 text-xs md:text-sm font-medium leading-relaxed italic border-l-2 border-brand-purple pl-4">
-              A Speak AI nasce da sua convicção de que a Inteligência Artificial é a maior alavanca da nova economia — capaz de transformar negócios e oferecer liberdade a empreendedores e criadores.
+              A Speak AI nasce da sua convicção de que a Inteligência Artificial é a maior alavanca da nova economia, capaz de transformar negócios e oferecer liberdade a empreendedores e criadores.
             </p>
           </div>
         </div>
