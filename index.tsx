@@ -103,7 +103,7 @@ const Hero: React.FC = () => {
             <a href="https://app.speakia.ai/" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center">
               <div className="absolute -inset-1 bg-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative inline-flex bg-brand-purple hover:bg-brand-blue text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
-                SPEAK AI ACADEMY
+                ASSINAR PLANO
               </span>
             </a>
           </div>
