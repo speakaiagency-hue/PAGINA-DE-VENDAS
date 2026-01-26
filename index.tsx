@@ -326,98 +326,39 @@ const SkillsSection: React.FC = () => {
 const BonusSection: React.FC = () => {
   const bonus = [
     { t: "GERADOR DE PROMPT GRATUITO (PRA QUEM NÃO SABE CRIAR)", p: "R$1.997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/prompt-768x439-1.png" },
-    { t: "CONSULTORIA DE AVALIAÇÃO DO NEGÓCIO", p: "R$10.597", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CONSULTORIA-1024x585-1.png" },
-    { t: "CANAL EXCLUSIVO COM DICAS DE USO, TRENDS E PROMPTS QUE UTILIZAMOS", p: "R$997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
+    { t: "CANAL EXCLUSIVO COM DICAS DE USO", p: "R$997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
     { t: "MINI CURSO GRATUITO", p: "R$297", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Captura-de-tela-2026-01-21-194141.png" }
   ];
   return (
     <section className="py-24 px-6 bg-zinc-950/20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">BÔNUS EXCLUSIVOS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+          BÔNUS EXCLUSIVOS
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonus.map((b, i) => (
-            <div key={i} className="bg-zinc-900/10 border border-white/5 rounded-3xl overflow-hidden group hover:border-brand-purple/30 transition-all">
-               <div className="aspect-[4/3] overflow-hidden grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
-                  <img src={b.img} className="w-full h-full object-cover" />
-               </div>
-               <div className="p-6 space-y-4">
-                  <h3 className="text-sm font-black italic text-white uppercase tracking-tighter">{b.t}</h3>
-                  <div className="flex justify-between items-center pt-4 border-t border-white/5">
-                     <span className="text-[10px] text-zinc-600 line-through italic">{b.p}</span>
-                     <span className="text-brand-cyan font-black italic text-base">R$ 0,00</span>
-                  </div>
-               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Academy Section definida internamente para fidelidade de estrutura
-const AcademySection: React.FC = () => {
-  const academyImages = [
-    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-164.png", label: "METODOLOGIA PRÁTICA" },
-    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-165.png", label: "IA GENERATIVA" },
-    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-162.png", label: "MONETIZAÇÃO" },
-    { img: "https://ofilmboss.com/wp-content/uploads/2026/01/Frame-163.png", label: "ESCALE SEU NEGÓCIO" }
-  ];
-
-  return (
-    <section id="academy" className="relative py-20 md:py-28 px-6 overflow-hidden bg-black border-t border-white/5">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-full pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/10 blur-[120px] rounded-full opacity-30"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col items-center text-center space-y-12">
-          <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-purple/40 bg-brand-purple/10 backdrop-blur-md">
-               <span className="text-lg">🚀</span>
-               <span className="text-brand-cyan font-black text-[9px] md:text-[10px] tracking-[0.3em] uppercase italic">SPEAK AI ACADEMY</span>
-            </div>
-            
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.9] text-white">
-              DO ZERO AO <br />
-              <span className="text-brand-purple">AVANÇADO</span>
-            </h2>
-          </div>
-
-          <div className="max-w-xl">
-            <p className="text-zinc-500 text-sm md:text-base font-bold italic leading-tight">
-              O treinamento definitivo para quem deseja dominar o mercado de influenciadores virtuais e inteligência artificial.
-            </p>
-          </div>
-
-          <div className="flex flex-row flex-wrap md:flex-nowrap justify-center gap-3 md:gap-5 w-full max-w-5xl py-4">
-            {academyImages.map((item, i) => (
-              <div key={i} className="group relative w-[calc(50%-0.75rem)] md:w-1/4 aspect-[4/5] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900/40 transition-all duration-500 hover:border-brand-purple/50">
-                <img 
-                  src={item.img} 
-                  alt={item.label} 
-                  className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
-                  <span className="text-white font-black italic uppercase text-[8px] md:text-[9px] tracking-widest leading-none border-l-2 border-brand-purple pl-2">
-                    {item.label}
+            <div
+              key={i}
+              className="bg-zinc-900/10 border border-white/5 rounded-3xl overflow-hidden group hover:border-brand-purple/30 transition-all"
+            >
+              <div className="aspect-[4/3] overflow-hidden grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
+                <img src={b.img} className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 space-y-6">
+                <h3 className="text-lg md:text-xl font-black italic text-white uppercase tracking-tighter">
+                  {b.t}
+                </h3>
+                <div className="flex justify-between items-center pt-6 border-t border-white/10">
+                  <span className="text-sm md:text-base text-zinc-500 line-through italic">
+                    {b.p}
+                  </span>
+                  <span className="text-brand-cyan font-black italic text-2xl md:text-3xl">
+                    R$ 0,00
                   </span>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div className="pt-6 w-full flex flex-col items-center">
-            <a 
-              href="#oferta" 
-              className="inline-block bg-brand-purple text-white px-10 md:px-14 py-4 md:py-5 text-base md:text-lg font-black italic uppercase tracking-tighter shadow-[0_15px_30px_rgba(88,38,254,0.3)] hover:bg-brand-blue hover:scale-105 transition-all active:scale-95"
-            >
-              QUERO COMEÇAR AGORA
-            </a>
-            <p className="text-zinc-700 text-[9px] font-bold uppercase italic tracking-widest mt-6 opacity-50">
-              Acesso imediato à plataforma Speak IA Academy
-            </p>
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -437,7 +378,6 @@ const PricingSection: React.FC = () => {
         "Gerador de Prompt",
         "Gerações de imagem",
         "Geração de Vídeos",
-        "Email + WhatsApp",
       ],
     },
     {
@@ -451,7 +391,6 @@ const PricingSection: React.FC = () => {
         "Gerador de Prompt",
         "Gerações de imagem",
         "Geração de Vídeos",
-        "Email + WhatsApp",
       ],
     },
     {
@@ -464,7 +403,6 @@ const PricingSection: React.FC = () => {
         "Gerador de Prompt",
         "Gerações de imagem",
         "Geração de Vídeos",
-        "Email + WhatsApp",
       ],
     },
   ];
@@ -729,7 +667,6 @@ const App: React.FC = () => {
         <ShowcaseCarousel /> 
         <SkillsSection />
         <BonusSection />
-        <AcademySection />
         <PricingSection />
         <AmbassadorSection />
         <AuthorSection />
