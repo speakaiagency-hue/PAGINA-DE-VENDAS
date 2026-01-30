@@ -156,35 +156,76 @@ const Header: React.FC = () => {
 
 // --- Hero ---
 const Hero: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const targetId = id === "planos" ? "oferta" : id;
+    const el = document.getElementById(targetId);
+    if (el) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    } else if (id === "início") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section id="início" className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-x-hidden px-6">
+    <section
+      id="início"
+      className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-x-hidden px-6"
+    >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="z-10 space-y-6 text-left">
           <div className="inline-block py-1.5 px-4 rounded-full border border-brand-purple/30 bg-brand-purple/10 backdrop-blur-sm">
-             <span className="text-brand-cyan font-black text-[9px] tracking-[0.3em] uppercase italic">Speak AI</span>
+            <span className="text-brand-cyan font-black text-[9px] tracking-[0.3em] uppercase italic">
+              Speak AI
+            </span>
           </div>
           <div className="space-y-0.5">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-white uppercase block">Crie sua</h1>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-brand-purple uppercase block">INFLUENCER IA</h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-white uppercase block">
+              Crie sua
+            </h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-brand-purple uppercase block">
+              INFLUENCER IA
+            </h1>
           </div>
           <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug">
             Crie seu próprio INFLUENCER com IA. Aulas curtas, diretas e que cabem no seu dia. Conhecimento sem complicação.
           </p>
+
+          {/* Botão que rola até os planos */}
           <div className="pt-4">
-            <a href="https://app.speakia.ai/" target="_blank" rel="noopener noreferrer" className="group relative inline-flex items-center justify-center">
+            <button
+              onClick={() => scrollTo("planos")}
+              className="group relative inline-flex items-center justify-center"
+            >
               <div className="absolute -inset-1 bg-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative inline-flex bg-brand-purple hover:bg-brand-blue text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
-                SPEAK AI ACADEMY
+                COMECE AGORA
               </span>
-            </a>
+            </button>
           </div>
         </div>
+
         <div className="relative group w-full">
           <div className="absolute -inset-8 bg-brand-purple/5 blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
-            <video className="w-full h-full object-cover" src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4" autoPlay loop muted playsInline></video>
+            <video
+              className="w-full h-full object-cover"
+              src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
             <div className="absolute bottom-6 right-6 w-20 h-20 animate-float pointer-events-none">
-               <img src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-1-scaled.png" alt="Selo" className="w-full h-full object-contain drop-shadow-lg" />
+              <img
+                src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-1-scaled.png"
+                alt="Selo"
+                className="w-full h-full object-contain drop-shadow-lg"
+              />
             </div>
           </div>
         </div>
