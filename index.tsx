@@ -615,7 +615,7 @@ const AuthorSection: React.FC = () => {
         <div className="w-full max-w-lg space-y-6 mx-auto">
           <div className="space-y-3">
             <span className="text-brand-purple text-xs font-black uppercase tracking-[0.3em] italic">
-            CO-FOUNDER & INSTRUTOR <span className="text-brand-cyan">SPEAK AI</span>
+            FUNDADOR DA <span className="text-brand-cyan">SPEAK AI</span>
             </span>
             <h2 className="text-2xl md:text-3xl font-black italic tracking-tight text-white uppercase">
             LUCAS ZANARDO
