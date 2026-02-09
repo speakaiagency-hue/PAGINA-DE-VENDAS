@@ -413,7 +413,7 @@ const PricingSection: React.FC = () => {
       title: "Básico",
       subtitle: "Perfeito para iniciantes - 500 créditos",
       price: "97,00",
-      link: "https://pay.kiwify.com.br/oVEv5ur",
+      link: "https://pay.kiwify.com.br/8IDayIy",
       features: [
         "Chat IA ilimitado",
       "Gerador de Prompt",
@@ -426,7 +426,7 @@ const PricingSection: React.FC = () => {
       title: "Pro",
       subtitle: "Para profissionais - 1.500 créditos",
       price: "197,00",
-      link: "https://pay.kiwify.com.br/eOp6u0X",
+      link: "https://pay.kiwify.com.br/QnHmsQm",
       isFeatured: true,
       features: [
         "Chat IA ilimitado",
@@ -440,7 +440,7 @@ const PricingSection: React.FC = () => {
       title: "Premium",
       subtitle: "Para agências e empresas - 5.000 créditos",
       price: "697,00",
-      link: "https://pay.kiwify.com.br/m06mp5S",
+      link: "https://pay.kiwify.com.br/hOJ3bEi",
       features: [
        "Chat IA ilimitado",
       "Gerador de Prompt",
