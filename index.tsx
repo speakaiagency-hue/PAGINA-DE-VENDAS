@@ -154,53 +154,89 @@ const Header: React.FC = () => {
   );
 };
 
-// --- ShowcaseCarousel ---
-const ShowcaseCarousel: React.FC = () => {
-  const items = [
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { desc: "PARA SEU INSTAGRAM!" },
-    { desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { desc: "CONSEGUINDO SEM APARECER!" },
-    { desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
-  ];
+// --- Hero ---
+const Hero: React.FC = () => {
+  const scrollTo = (id: string) => {
+    const targetId = id === "planos" ? "oferta" : id;
+    const el = document.getElementById(targetId);
+    if (el) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    } else if (id === "início") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
-return (
-    <section id="conteúdo" className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10">
-      {/* Glow azul de fundo */}
-      <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
-      
-      <div className="max-w-7xl mx-auto space-y-12 px-6">
-        {/* Título principal em azul */}
-        <div className="text-center">
-          <div className="inline-block bg-brand-blue px-8 py-3 rounded-full mb-4 shadow-[0_0_40px_rgba(59,130,246,0.3)] transform -rotate-1">
-            <h2 className="text-xl md:text-3xl font-black italic text-white uppercase tracking-tighter">
-              O QUE VAMOS RESOLVER PARA VOCÊ!
-            </h2>
+  return (
+    <section
+      id="início"
+      className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-x-hidden px-6"
+    >
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="z-10 space-y-6 text-left">
+          <div className="inline-block py-1.5 px-4 rounded-full border border-brand-purple/30 bg-gradient-to-r from-brand-blue to-brand-purple backdrop-blur-sm">
+            <span className="text-white font-black text-[9px] tracking-[0.3em] uppercase italic">
+              Speak AI
+            </span>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-white uppercase">
+              CHEGA DE CONTEÚDOS AMADORES
+            </h1>
+            {/* Texto com degradê azul → roxo */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent uppercase">
+              NA SUA REDE SOCIAL E CRIATIVOS!
+            </h1>
+          </div>
+
+          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
+            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
+          </p>
+
+          <div className="pt-4">
+            <button
+              onClick={() => scrollTo("planos")}
+              className="group relative inline-flex items-center justify-center"
+            >
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
+              <span className="relative inline-flex bg-gradient-to-r from-brand-blue to-brand-purple text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
+                COMECE AGORA!
+              </span>
+            </button>
           </div>
         </div>
 
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden">
-          {items.map((it, i) => (
-            <div key={i} className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]">
-              <div className="space-y-4">
-                <div className="w-8 h-px bg-brand-purple group-hover:w-16 transition-all duration-500"></div>
-                <h3 className="text-xl md:text-2xl font-black italic uppercase text-white leading-tight tracking-tighter">
-                  {it.t}
-                </h3>
-              </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-brand-cyan transition-colors tracking-widest">
-                {it.desc}
-              </p>
+        <div className="relative group w-full">
+          <div className="absolute -inset-8 bg-gradient-to-r from-brand-blue to-brand-purple blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
+            <video
+              className="w-full h-full object-cover"
+              src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
+            <div className="absolute bottom-6 right-6 w-20 h-20 animate-float pointer-events-none">
+              <img
+                src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-1-scaled.png"
+                alt="Selo"
+                className="w-full h-full object-contain drop-shadow-lg"
+                referrerPolicy="no-referrer"
+              />
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
 
 
 
@@ -295,42 +331,41 @@ const WhyNotSellSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/videos-profissionais.jpg" }, 
-    { desc: "PARA SEU INSTAGRAM!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg" }, 
-    { desc: "VOCÊ CRIA SEUS NOVOS CONTEÚDOS!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/poucos-cliques.jpg" }, 
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg" }, 
-    { desc: "CONSEGUINDO SEM APARECER!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/vender-engajar.jpg" }, 
-    { desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg" } 
+    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { desc: "PARA SEU INSTAGRAM!" },
+    { desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
+    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { desc: "CONSEGUINDO SEM APARECER!" },
+    { desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
   ];
 
-  return (
-    <section
-      id="conteúdo"
-      className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-purple-500/20"
-    >
-      {/* Glow roxo neon de fundo */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-fuchsia-500/20 to-pink-500/20 pointer-events-none"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-to-r from-purple-500/30 via-fuchsia-500/30 to-pink-500/30 blur-[180px] -z-10 rounded-full"></div>
-
+return (
+    <section id="conteúdo" className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10">
+      {/* Glow azul de fundo */}
+      <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
+      
       <div className="max-w-7xl mx-auto space-y-12 px-6">
-        {/* Grid de cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((it, i) => (
-            <div
-              key={i}
-              className="group bg-zinc-900/40 backdrop-blur-sm border border-white/10 p-6 rounded-3xl hover:border-purple-400 hover:bg-zinc-900/60 transition-all duration-500 shadow-[0_0_25px_rgba(139,92,246,0.4)] flex flex-col"
-            >
-              {/* Imagem de capa */}
-              <div className="aspect-video rounded-xl overflow-hidden bg-black/40 mb-4 border border-white/5">
-                <img
-                  src={it.img}
-                  alt={it.desc}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
+        {/* Título principal em azul */}
+        <div className="text-center">
+          <div className="inline-block bg-brand-blue px-8 py-3 rounded-full mb-4 shadow-[0_0_40px_rgba(59,130,246,0.3)] transform -rotate-1">
+            <h2 className="text-xl md:text-3xl font-black italic text-white uppercase tracking-tighter">
+              O QUE VAMOS RESOLVER PARA VOCÊ!
+            </h2>
+          </div>
+        </div>
 
-              {/* Apenas descrição maior com efeito neon */}
-              <p className="text-lg md:text-xl font-black italic uppercase text-zinc-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400 transition-colors tracking-widest text-center drop-shadow-[0_0_10px_rgba(139,92,246,0.7)]">
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden">
+          {items.map((it, i) => (
+            <div key={i} className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]">
+              <div className="space-y-4">
+                <div className="w-8 h-px bg-brand-purple group-hover:w-16 transition-all duration-500"></div>
+                <h3 className="text-xl md:text-2xl font-black italic uppercase text-white leading-tight tracking-tighter">
+                  {it.t}
+                </h3>
+              </div>
+              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-brand-cyan transition-colors tracking-widest">
                 {it.desc}
               </p>
             </div>
