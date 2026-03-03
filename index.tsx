@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="início"
-      className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-x-hidden px-6 bg-gradient-to-r from-brand-blue via-indigo-600 to-brand-purple"
+      className="relative pt-32 md:pt-40 pb-20 md:pb-32 overflow-x-hidden px-6"
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="z-10 space-y-6 text-left">
@@ -186,15 +186,17 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-white uppercase">
+            {/* Primeiro título com degradê azul → roxo */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent uppercase">
               CHEGA DE CONTEÚDOS AMADORES
             </h1>
+            {/* Segundo título também com degradê azul → roxo */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent uppercase">
               NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
 
-          <p className="text-xs md:text-sm text-zinc-200 font-bold max-w-sm leading-snug uppercase">
+          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
             COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
           </p>
 
@@ -203,7 +205,6 @@ const Hero: React.FC = () => {
               onClick={() => scrollTo("planos")}
               className="group relative inline-flex items-center justify-center"
             >
-              {/* Glow degradê azul → roxo */}
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative inline-flex bg-gradient-to-r from-brand-blue to-brand-purple text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
                 COMECE AGORA!
@@ -213,7 +214,6 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative group w-full">
-          {/* Glow degradê azul → roxo atrás do vídeo */}
           <div className="absolute -inset-8 bg-gradient-to-r from-brand-blue to-brand-purple blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
             <video
@@ -238,7 +238,6 @@ const Hero: React.FC = () => {
     </section>
   );
 };
-
 
 
 // --- ProblemsSection ---
