@@ -184,11 +184,14 @@ const Hero: React.FC = () => {
             </span>
           </div>
           <div className="space-y-0.5">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-white uppercase block">
-              CHEGA DE CONTEÚDOS AMADORES NA SUA REDE SOCIAL E CRIATIVOS!
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[52px] font-black italic tracking-tighter leading-[0.95] text-white uppercase block">
+              CHEGA DE CONTEÚDOS AMADORES
+            </h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[52px] font-black italic tracking-tighter leading-[0.95] text-brand-purple uppercase block">
+              NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
-          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
+          <p className="text-xs md:text-sm text-brand-purple font-bold max-w-sm leading-snug uppercase">
             COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
           </p>
 
@@ -230,7 +233,6 @@ const Hero: React.FC = () => {
     </section>
   );
 };
-
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
