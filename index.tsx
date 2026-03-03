@@ -304,24 +304,58 @@ const ShowcaseCarousel: React.FC = () => {
     { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
     { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
   ];
+
+  const testimonials = [
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-bella.mp4", t: "Vídeo da Bella usando para marcar o Gui" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/new-four.mp4", t: "Dono da New Four falando" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/loja-roupa.mp4", t: "Dono de loja online de roupa falando" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/restaurante.mp4", t: "Dono de restaurante falando" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4", t: "Influencer falando que usa e facilita a vida" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/advogado.mp4", t: "Advogado falando sobre nova ideia sem aparecer" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dentista.mp4", t: "Dentista que precisa divulgar serviços e não tem tempo para gravar" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/afiliado.mp4", t: "Afiliado de produtos digitais e físicos usando a ferramenta para vender" }
+  ];
+
   return (
-    <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-          O QUE VOCÊ VAI <br/> CONSEGUIR FAZER?
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-          {items.map((it, i) => (
-            <div key={i} className="group space-y-3">
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
-                <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+    <>
+      {/* Primeira sessão */}
+      <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+            O QUE VAMOS RESOLVER PARA <br/> VOCÊ?
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+            {items.map((it, i) => (
+              <div key={i} className="group space-y-3">
+                <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
+                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
+                <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
               </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Segunda sessão - depoimentos */}
+      <section id="depoimentos" className="py-24 bg-zinc-950 px-6 overflow-x-hidden">
+        <div className="max-w-7xl mx-auto space-y-12">
+          <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+            VEJA O QUE OS CLIENTES <br/> DA SPEAK-AI FALAM SOBRE <br/> O NOSSO PRODUTO!
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {testimonials.map((it, i) => (
+              <div key={i} className="group space-y-3">
+                <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
+                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
+                <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
