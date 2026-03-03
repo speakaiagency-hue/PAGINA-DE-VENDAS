@@ -178,21 +178,23 @@ const Hero: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="z-10 space-y-6 text-left">
-          <div className="inline-block py-1.5 px-4 rounded-full border border-brand-purple/30 bg-brand-purple/10 backdrop-blur-sm">
-            <span className="text-brand-cyan font-black text-[9px] tracking-[0.3em] uppercase italic">
+          <div className="inline-block py-1.5 px-4 rounded-full border border-brand-purple/30 bg-gradient-to-r from-brand-blue to-brand-purple backdrop-blur-sm">
+            <span className="text-white font-black text-[9px] tracking-[0.3em] uppercase italic">
               Speak AI
             </span>
           </div>
+
           <div className="flex flex-wrap gap-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-white uppercase">
               CHEGA DE CONTEÚDOS AMADORES
             </h1>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-brand-purple uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] bg-gradient-to-r from-brand-blue to-brand-purple bg-clip-text text-transparent uppercase">
               NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
+
           <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
-            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEUDOS PROFISSIONAIS
+            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
           </p>
 
           <div className="pt-4">
@@ -200,8 +202,8 @@ const Hero: React.FC = () => {
               onClick={() => scrollTo("planos")}
               className="group relative inline-flex items-center justify-center"
             >
-              <div className="absolute -inset-1 bg-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
-              <span className="relative inline-flex bg-brand-purple hover:bg-brand-blue text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
+              <span className="relative inline-flex bg-gradient-to-r from-brand-blue to-brand-purple text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
                 COMECE AGORA!
               </span>
             </button>
@@ -209,7 +211,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="relative group w-full">
-          <div className="absolute -inset-8 bg-brand-purple/5 blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="absolute -inset-8 bg-gradient-to-r from-brand-blue to-brand-purple blur-[100px] rounded-full opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
             <video
               className="w-full h-full object-cover"
