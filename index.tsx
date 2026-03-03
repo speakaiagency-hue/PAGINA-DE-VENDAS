@@ -194,9 +194,6 @@ const Hero: React.FC = () => {
           <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
             COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEUDOS PROFISSIONAIS
           </p>
-          <p className="text-[10px] text-zinc-500 font-medium max-w-xs italic">
-            Crie seu próprio INFLUENCER do zero, de forma simples, rápida e que cabem no seu dia. Conhecimento sem complicação.
-          </p>
 
           <div className="pt-4">
             <button
