@@ -257,10 +257,26 @@ const ProblemsSection: React.FC = () => {
   const renderGrid = (list: typeof problems1, prefix: string) => (
     <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
       {list.map((p, i) => (
-        <div key={`${prefix}-${i}`} className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group">
-          <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
-          <video src={p.video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">{p.label}</div>
+        <div
+          key={`${prefix}-${i}`}
+          className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group"
+        >
+          <img
+            src={p.img}
+            alt={p.label}
+            className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+          />
+          <video
+            src={p.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+          />
+          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">
+            {p.label}
+          </div>
         </div>
       ))}
     </div>
@@ -301,9 +317,18 @@ const ShowcaseCarousel: React.FC = () => {
           {items.map((it, i) => (
             <div key={i} className="group space-y-3">
               <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-brand-purple/50">
-                <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <video
+                  src={it.v}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
               </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
+              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">
+                {it.t}
+              </p>
             </div>
           ))}
         </div>
