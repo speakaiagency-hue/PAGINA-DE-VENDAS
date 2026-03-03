@@ -326,31 +326,44 @@ const WhyNotSellSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { t: "VIDEOS PROFISSIONAIS COM ALTO PODER DE ENGAJAMENTO E OU VENDA!", desc: "Criar uma influencer do zero pra vender pra você" },
-    { t: "CREDIBILIDADE PARA SEU INSTAGRAM!", desc: "Adicionar seu produto diretamente na influencer" },
-    { t: "COM POUCOS CLIQUES VOCÊ CRIA SEUS NOVOS CONTEUDOS!", desc: "Trocar roupas, cenários, cores, influencer, produtos" },
-    { t: "IMAGENS PROFISSIONAIS COM ALTO PODER DE ENGAJAMENTO E OU VENDA!", desc: "Fazer seu próprio Avatar para criar conteúdo pra você" },
-    { t: "CONSEGUINDO VENDER E ENGAJAR SEM APARECER!", desc: "Vender até mesmo sem aparecer" },
-    { t: "FALE SOBRE ALGUM TEMA/ASSUNTO COM FACILIDADE COM A SPEAK.AI", desc: "Uma influencer ultra realista" }
+    { t: "VIDEOS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { t: "CREDIBILIDADE", desc: "PARA SEU INSTAGRAM!" },
+    { t: "COM POUCOS CLIQUES", desc: "VOCÊ CRIA SEUS NOVOS CONTEÚDOS!" },
+    { t: "IMAGENS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { t: "VENDER E ENGAJAR", desc: "CONSEGUINDO SEM APARECER!" },
+    { t: "FACILIDADE", desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
   ];
 
   return (
-    <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-          O QUE VAMOS RESOLVER PARA <br /> VOCÊ!
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <section id="conteúdo" className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10">
+      {/* Subtle Blue Glow */}
+      <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
+      
+      <div className="max-w-7xl mx-auto space-y-12 px-6">
+        <div className="text-center">
+          <div className="inline-block bg-yellow-400 px-8 py-3 rounded-full mb-4 shadow-[0_0_40px_rgba(250,204,21,0.2)] transform -rotate-1">
+            <h2 className="text-xl md:text-3xl font-black italic text-black uppercase tracking-tighter">
+              O QUE VAMOS RESOLVER PARA VOCÊ!
+            </h2>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden">
           {items.map((it, i) => (
-            <div key={i} className="group bg-zinc-900/40 border border-white/5 p-6 rounded-3xl hover:border-brand-purple/50 transition-all space-y-4">
-              <div className="aspect-video rounded-xl overflow-hidden bg-zinc-950">
-                <div className="w-full h-full flex items-center justify-center text-[10px] text-zinc-700 font-black italic uppercase tracking-widest text-center p-4">
-                   {it.desc}
-                </div>
+            <div
+              key={i}
+              className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]"
+            >
+              <div className="space-y-4">
+                <div className="w-8 h-px bg-brand-purple group-hover:w-16 transition-all duration-500"></div>
+                <h3 className="text-xl md:text-2xl font-black italic uppercase text-brand-blue leading-tight tracking-tighter">
+                  {it.t}
+                </h3>
               </div>
-              <h3 className="text-xs md:text-sm font-black italic uppercase text-white leading-tight">
-                {it.t}
-              </h3>
+              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-brand-cyan transition-colors tracking-widest">
+                {it.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -358,6 +371,7 @@ const ShowcaseCarousel: React.FC = () => {
     </section>
   );
 };
+
 
 // --- TestimonialsSection ---
 const TestimonialsSection: React.FC = () => {
