@@ -335,6 +335,104 @@ const ProblemsSection: React.FC = () => {
   );
 };
 
+// --- ProblemsSection ---
+const ProblemsSection: React.FC = () => {
+  const problems = [
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4",
+      label: "PRODUTOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4",
+      label: "SERVIÇOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4",
+      label: "INFLUENCER"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4",
+      label: "EMPRESÁRIOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4",
+      label: "PARA QUEM QUER VENDER SEM APARECER!"
+    }
+  ];
+
+  return (
+    <section className="py-24 px-6 overflow-x-hidden relative">
+      {/* Fundo com gradiente neon animado */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 animate-gradient-neon"></div>
+
+      <div className="max-w-7xl mx-auto text-center space-y-6">
+        <span className="text-[9px] text-zinc-300 font-black uppercase italic tracking-widest leading-none block drop-shadow-[0_0_8px_rgba(88,38,254,0.8)]">
+          SPEAK AI <br /> 2026 //
+        </span>
+        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">
+          PARA QUEM É A SPEAK AI!
+        </h2>
+      </div>
+
+      {/* Grid de quadrados com imagem e vídeo no hover */}
+      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
+        {problems.map((p, i) => (
+          <div
+            key={i}
+            className="relative aspect-square rounded-lg overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] group"
+          >
+            {/* Imagem padrão */}
+            <img
+              src={p.img}
+              alt={p.label}
+              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+            />
+            {/* Vídeo aparece no hover */}
+            <video
+              src={p.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            />
+            {/* Label sobreposto */}
+            <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white drop-shadow-lg">
+              {p.label}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div
+        id="sobre"
+        className="max-w-7xl mx-auto mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24"
+      >
+        <div className="space-y-6">
+          <h2 className="text-5xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.8] text-white drop-shadow-[0_0_15px_rgba(0,200,255,0.8)]">
+            A <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">SPEAK AI</span> <br /> EXISTE PARA <br /> RESOLVER ISSO
+          </h2>
+        </div>
+        <div className="rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_25px_rgba(0,200,255,0.6)] relative">
+          <video
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full aspect-video object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
@@ -363,44 +461,13 @@ const ShowcaseCarousel: React.FC = () => {
       <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
         <div className="max-w-7xl mx-auto space-y-12">
           <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-            O QUE VAMOS RESOLVER PARA <br/> VOCÊ?
+            O QUE VOCÊ VAI <br/> CONSEGUIR FAZER?
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
             {items.map((it, i) => (
               <div key={i} className="group space-y-3">
                 <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
-                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Segunda sessão - depoimentos */}
-      <section id="depoimentos" className="py-24 bg-zinc-950 px-6 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-            VEJA O QUE OS CLIENTES <br/> DA SPEAK-AI FALAM SOBRE <br/> O NOSSO PRODUTO!
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {testimonials.map((it, i) => (
-              <div key={i} className="group space-y-3">
-                <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
-                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                </div>
-                <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-// --- SkillsSection ---
+                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full// --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
     { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "APRENDA COMO USAR A FERRAMENTA" },
