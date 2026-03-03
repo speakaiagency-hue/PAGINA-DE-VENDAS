@@ -183,16 +183,16 @@ const Hero: React.FC = () => {
               Speak AI
             </span>
           </div>
-          <div className="space-y-0.5">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-white uppercase block">
+          <div className="flex flex-wrap gap-2">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-white uppercase">
               CHEGA DE CONTEÚDOS AMADORES
             </h1>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-brand-purple uppercase block">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] font-black italic tracking-tighter leading-[1] text-brand-purple uppercase">
               NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
           <p className="text-xs md:text-sm text-brand-purple font-bold max-w-sm leading-snug uppercase">
-            Com a SPEAK AI você vende e engaja mais com conteúdos PROFISSIONAIS
+            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
           </p>
 
           {/* Botão que rola até os planos */}
@@ -233,6 +233,7 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
