@@ -326,56 +326,51 @@ const WhyNotSellSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { t: "VIDEOS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/videos-profissionais.jpg" }, 
-    { t: "CREDIBILIDADE", desc: "PARA SEU INSTAGRAM!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg" }, 
-    { t: "COM POUCOS CLIQUES", desc: "VOCÊ CRIA SEUS NOVOS CONTEÚDOS!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/poucos-cliques.jpg" }, 
-    { t: "IMAGENS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg" }, 
-    { t: "VENDER E ENGAJAR", desc: "CONSEGUINDO SEM APARECER!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/vender-engajar.jpg" }, 
-    { t: "FACILIDADE", desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg" } 
+    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/videos-profissionais.jpg" }, 
+    { desc: "PARA SEU INSTAGRAM!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg" }, 
+    { desc: "VOCÊ CRIA SEUS NOVOS CONTEÚDOS!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/poucos-cliques.jpg" }, 
+    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg" }, 
+    { desc: "CONSEGUINDO SEM APARECER!", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/vender-engajar.jpg" }, 
+    { desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg" } 
   ];
 
   return (
     <section
       id="conteúdo"
-      className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10"
+      className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-purple/10"
     >
-      {/* Glow azul de fundo */}
-      <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
+      {/* Glow roxo de fundo */}
+      <div className="absolute inset-0 bg-brand-purple/5 pointer-events-none"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-purple/10 blur-[150px] -z-10 rounded-full"></div>
 
       <div className="max-w-7xl mx-auto space-y-12 px-6">
-        {/* Título principal em azul */}
+        {/* Título principal em roxo */}
         <div className="text-center">
-          <div className="inline-block bg-brand-blue px-8 py-3 rounded-full mb-4 shadow-[0_0_40px_rgba(59,130,246,0.3)] transform -rotate-1">
+          <div className="inline-block bg-brand-purple px-8 py-3 rounded-full mb-4 shadow-[0_0_40px_rgba(88,38,254,0.3)] transform -rotate-1">
             <h2 className="text-xl md:text-3xl font-black italic text-white uppercase tracking-tighter">
               O QUE VAMOS RESOLVER PARA VOCÊ!
             </h2>
           </div>
         </div>
 
-        {/* Grid de cards */}
+        {/* Grid de cards com imagem + descrição maior */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((it, i) => (
             <div
               key={i}
-              className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-6 rounded-3xl hover:border-brand-blue/50 hover:bg-zinc-900/60 transition-all duration-500 shadow-xl flex flex-col"
+              className="group bg-zinc-900/40 backdrop-blur-sm border border-white/5 p-6 rounded-3xl hover:border-brand-purple/50 hover:bg-zinc-900/60 transition-all duration-500 shadow-xl flex flex-col"
             >
               {/* Imagem de capa */}
-              <div className="aspect-video rounded-xl overflow-hidden bg-black/40 mb-4 border border-white/5">
+              <div className="aspect-video rounded-xl overflow-hidden bg-black/40 mb-6 border border-white/5">
                 <img
                   src={it.img}
-                  alt={it.t}
+                  alt={`Card ${i + 1}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
 
-              {/* Título em azul */}
-              <h3 className="text-xl md:text-2xl font-black italic uppercase text-brand-blue leading-tight tracking-tighter mb-2">
-                {it.t}
-              </h3>
-
-              {/* Descrição */}
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-brand-cyan transition-colors tracking-widest">
+              {/* Descrição maior abaixo da imagem */}
+              <p className="text-base md:text-lg font-black italic uppercase text-zinc-300 group-hover:text-brand-cyan transition-colors tracking-wide text-center">
                 {it.desc}
               </p>
             </div>
