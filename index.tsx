@@ -240,79 +240,27 @@ const Hero: React.FC = () => {
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
   const problems1 = [
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4",
-      label: "PRODUTOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4",
-      label: "SERVIÇOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4",
-      label: "INFLUENCER"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4",
-      label: "EMPRESÁRIOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4",
-      label: "PARA QUEM QUER VENDER SEM APARECER!"
-    }
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4", label: "PRODUTOS" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4", label: "SERVIÇOS" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4", label: "INFLUENCER" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4", label: "EMPRESÁRIOS" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4", label: "PARA QUEM QUER VENDER SEM APARECER!" }
   ];
 
   const problems2 = [
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.mp4",
-      label: "VÍDEOS PROFISSIONAIS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.mp4",
-      label: "IMAGENS PROFISSIONAIS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.mp4",
-      label: "CREDIBILIDADE NO INSTAGRAM"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.mp4",
-      label: "FACILIDADE PARA CRIAR CONTEÚDO"
-    }
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.mp4", label: "VÍDEOS PROFISSIONAIS" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.mp4", label: "IMAGENS PROFISSIONAIS" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.mp4", label: "CREDIBILIDADE NO INSTAGRAM" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.mp4", label: "FACILIDADE PARA CRIAR CONTEÚDO" }
   ];
 
   const renderGrid = (list: typeof problems1, prefix: string) => (
     <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
       {list.map((p, i) => (
-        <div
-          key={`${prefix}-${i}`}
-          className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group"
-        >
-          <img
-            src={p.img}
-            alt={p.label}
-            className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-          />
-          <video
-            src={p.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          />
-          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">
-            {p.label}
-          </div>
+        <div key={`${prefix}-${i}`} className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group">
+          <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0" />
+          <video src={p.video} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">{p.label}</div>
         </div>
       ))}
     </div>
@@ -326,10 +274,7 @@ const ProblemsSection: React.FC = () => {
         </h2>
       </div>
 
-      {/* Primeira grade */}
       {renderGrid(problems1, "p1")}
-
-      {/* Segunda grade duplicada */}
       {renderGrid(problems2, "p2")}
     </section>
   );
@@ -338,30 +283,12 @@ const ProblemsSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4",
-      t: "Criar uma influencer do zero pra vender pra você"
-    },
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4",
-      t: "Adicionar seu produto diretamente na influencer"
-    },
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4",
-      t: "Trocar roupas, cenários, cores, influencer, produtos"
-    },
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4",
-      t: "Fazer seu próprio Avatar para criar conteúdo pra você"
-    },
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4",
-      t: "Vender até mesmo sem aparecer"
-    },
-    {
-      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4",
-      t: "Uma influencer ultra realista"
-    }
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
+    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
   ];
 
   return (
@@ -374,18 +301,9 @@ const ShowcaseCarousel: React.FC = () => {
           {items.map((it, i) => (
             <div key={i} className="group space-y-3">
               <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-brand-purple/50">
-                <video
-                  src={it.v}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+                <video src={it.v} autoPlay loop muted playsInline className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">
-                {it.t}
-              </p>
+              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">{it.t}</p>
             </div>
           ))}
         </div>
@@ -393,7 +311,6 @@ const ShowcaseCarousel: React.FC = () => {
     </section>
   );
 };
-
 
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
