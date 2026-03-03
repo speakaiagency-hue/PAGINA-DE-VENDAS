@@ -191,11 +191,13 @@ const Hero: React.FC = () => {
               NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
-          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug">
-            Com a SPEAK AI você vende e engaja mais com conteúdos PROFISSIONAIS
+          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
+            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEUDOS PROFISSIONAIS
+          </p>
+          <p className="text-[10px] text-zinc-500 font-medium max-w-xs italic">
+            Crie seu próprio INFLUENCER do zero, de forma simples, rápida e que cabem no seu dia. Conhecimento sem complicação.
           </p>
 
-          {/* Botão que rola até os planos */}
           <div className="pt-4">
             <button
               onClick={() => scrollTo("planos")}
@@ -225,6 +227,7 @@ const Hero: React.FC = () => {
                 src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-1-scaled.png"
                 alt="Selo"
                 className="w-full h-full object-contain drop-shadow-lg"
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
@@ -237,7 +240,7 @@ const Hero: React.FC = () => {
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
-  const problems1 = [
+  const problems = [
     { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4", label: "PRODUTOS" },
     { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4", label: "SERVIÇOS" },
     { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4", label: "INFLUENCER" },
@@ -245,51 +248,80 @@ const ProblemsSection: React.FC = () => {
     { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4", label: "PARA QUEM QUER VENDER SEM APARECER!" }
   ];
 
-  const problems2 = [
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.mp4", label: "VÍDEOS PROFISSIONAIS" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.mp4", label: "IMAGENS PROFISSIONAIS" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.mp4", label: "CREDIBILIDADE NO INSTAGRAM" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.mp4", label: "FACILIDADE PARA CRIAR CONTEÚDO" }
-  ];
-
-  const renderGrid = (list: typeof problems1, prefix: string) => (
-    <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
-      {list.map((p, i) => (
-        <div
-          key={`${prefix}-${i}`}
-          className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group"
-        >
-          <img
-            src={p.img}
-            alt={p.label}
-            className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-          />
-          <video
-            src={p.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-          />
-          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">
-            {p.label}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-
   return (
     <section className="py-24 px-6 overflow-x-hidden relative">
       <div className="max-w-7xl mx-auto text-center space-y-6">
         <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
           PARA QUEM É A SPEAK AI!
         </h2>
+        <p className="text-[10px] text-zinc-500 font-black italic uppercase tracking-widest">
+          APARECER EXEMPLOS QUANDO PASSAR O MOUSE ENCIMA DE CADA QUADRANTE!
+        </p>
       </div>
 
-      {renderGrid(problems1, "p1")}
-      {renderGrid(problems2, "p2")}
+      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {problems.map((p, i) => (
+          <div
+            key={i}
+            className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 group bg-zinc-900"
+          >
+            <img
+              src={p.img}
+              alt={p.label}
+              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+              referrerPolicy="no-referrer"
+            />
+            <video
+              src={p.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            />
+            <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
+              <div className="text-center text-[9px] md:text-[10px] font-black italic uppercase text-white leading-tight">
+                {p.label}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+// --- WhyNotSellSection ---
+const WhyNotSellSection: React.FC = () => {
+  return (
+    <section className="py-24 px-6 bg-zinc-950/50 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="space-y-6">
+          <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter leading-tight">
+            Sabe porque vc nao vende? <br />
+            <span className="text-brand-purple">Porque o seu video ainda é muito amador</span>
+          </h2>
+          <p className="text-zinc-400 text-sm font-bold italic uppercase tracking-wider">
+            A SPEAK AI VEIO PARA RESOLVER ISSO!
+          </p>
+        </div>
+        <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-brand-purple/30 shadow-[0_0_50px_rgba(88,38,254,0.1)] bg-zinc-900">
+          <div className="absolute inset-0 flex items-center justify-center text-center p-8">
+             <p className="text-white font-black italic uppercase text-sm tracking-widest">
+                VIDEO SIMULANDO O USO DA FERRAMENTA! <br /> E LIKES E VENDAS SENDO REALIZADAS!
+             </p>
+          </div>
+          {/* Placeholder for the actual simulation video */}
+          <video
+            className="w-full h-full object-cover opacity-40"
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          ></video>
+        </div>
+      </div>
     </section>
   );
 };
@@ -297,35 +329,66 @@ const ProblemsSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
+    { t: "VIDEOS PROFISSIONAIS COM ALTO PODER DE ENGAJAMENTO E OU VENDA!", desc: "Criar uma influencer do zero pra vender pra você" },
+    { t: "CREDIBILIDADE PARA SEU INSTAGRAM!", desc: "Adicionar seu produto diretamente na influencer" },
+    { t: "COM POUCOS CLIQUES VOCÊ CRIA SEUS NOVOS CONTEUDOS!", desc: "Trocar roupas, cenários, cores, influencer, produtos" },
+    { t: "IMAGENS PROFISSIONAIS COM ALTO PODER DE ENGAJAMENTO E OU VENDA!", desc: "Fazer seu próprio Avatar para criar conteúdo pra você" },
+    { t: "CONSEGUINDO VENDER E ENGAJAR SEM APARECER!", desc: "Vender até mesmo sem aparecer" },
+    { t: "FALE SOBRE ALGUM TEMA/ASSUNTO COM FACILIDADE COM A SPEAK.AI", desc: "Uma influencer ultra realista" }
   ];
 
   return (
-    <section id="conteudo" className="py-24 bg-black px-6 overflow-x-hidden">
+    <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
         <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-          O QUE VOCÊ VAI <br /> CONSEGUIR FAZER?
+          O QUE VAMOS RESOLVER PARA <br /> VOCÊ!
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {items.map((it, i) => (
-            <div key={i} className="group space-y-3">
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-brand-purple/50">
-                <video
-                  src={it.v}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
+            <div key={i} className="group bg-zinc-900/40 border border-white/5 p-6 rounded-3xl hover:border-brand-purple/50 transition-all space-y-4">
+              <div className="aspect-video rounded-xl overflow-hidden bg-zinc-950">
+                <div className="w-full h-full flex items-center justify-center text-[10px] text-zinc-700 font-black italic uppercase tracking-widest text-center p-4">
+                   {it.desc}
+                </div>
               </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">
+              <h3 className="text-xs md:text-sm font-black italic uppercase text-white leading-tight">
                 {it.t}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// --- TestimonialsSection ---
+const TestimonialsSection: React.FC = () => {
+  const testimonials = [
+    "VIDEO DA BELLA USANDO PARA MARCA LE QUO",
+    "DONO DA NEW FOUR FALANDO",
+    "DONO DE LOJA ONLINE DE ROUPA FALANDO",
+    "DONO DE RESTAURANTE FALANDO",
+    "INFLUENCER FALANDO QUE USA E FACILITOU A VIDA",
+    "ADVOGADO FALANDO SOBRE ALGUMA NOVA MUDANÇA NA LEI E NAO GOSRTAVA DE APARECER",
+    "DENTISTA QUE PRECISA DIVULGAR SERVIÇO E NÃO TEM TEMPO PARA GRAVAR",
+    "AFILIADO DE PRODUTOS DIGITAIS E FISICOS USANDO A SPEAK.AI PARA VENDER"
+  ];
+
+  return (
+    <section className="py-24 px-6 bg-zinc-950 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto space-y-12">
+        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+          VEJA O QUE OS CLIENTES DA SPEAK-AI <br /> FALAM SOBRE O NOSSO PRODUTO!
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {testimonials.map((t, i) => (
+            <div key={i} className="aspect-[3/4] bg-zinc-900 border border-white/5 rounded-2xl p-4 flex flex-col items-center justify-center text-center group hover:border-brand-purple/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-brand-purple/20 flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-brand-purple" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <p className="text-[9px] md:text-[10px] font-black italic uppercase text-zinc-400 group-hover:text-white transition-colors leading-tight">
+                {t}
               </p>
             </div>
           ))}
@@ -338,14 +401,15 @@ const ShowcaseCarousel: React.FC = () => {
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
-    { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "APRENDA COMO USAR A FERRAMENTA" },
-    { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: ":O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
-    { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "APRENDA A CRIAR IMAGENS" },
-    { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "APRENDA A CRIAR AUDIO E MOVIMENTO" },
-    { id: "06", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" }
+    { id: "01", label: "CRIAÇÃO DE INFLUENCER", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "AULA 1: APRENDA COMO USAR A FERRAMENTA" },
+    { id: "02", label: "O PODER DO PROMPT", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "AULA 2: O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
+    { id: "03", label: "RETRATO REALISTA", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "AULA 3: APRENDA A CRIAR IMAGENS" },
+    { id: "04", label: "VOZ E MOVIMENTO", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "AULA 4: APRENDA A CRIAR AUDIO E MOVIMENTO" },
+    { id: "05", label: "EXPANSÃO GLOBAL", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "AULA 5: CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" },
+    { id: "06", label: "MONETIZAÇÃO", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
   ];
   return (
-    <section className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
+    <section id="sobre" className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-2">
             <span className="text-brand-purple text-[9px] font-black uppercase tracking-[0.4em] italic">METODOLOGIA DA</span>
@@ -355,11 +419,12 @@ const SkillsSection: React.FC = () => {
            {skills.map((s, i) => (
              <div key={i} className="space-y-4 group">
                 <div className={`aspect-[4/5] rounded-2xl overflow-hidden border-2 transition-all duration-500 ${i === 1 ? 'border-brand-cyan shadow-xl shadow-brand-cyan/10' : 'border-white/5 grayscale group-hover:grayscale-0'}`}>
-                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" referrerPolicy="no-referrer" />
                 </div>
-                <div className="text-center">
-                  <span className={`text-4xl font-black italic ${i === 1 ? 'text-brand-cyan' : 'text-zinc-800'}`}>{s.id}</span>
-                  <p className="text-[10px] font-black italic text-white uppercase">{s.t}</p>
+                <div className="text-center space-y-1">
+                  <span className={`text-2xl font-black italic ${i === 1 ? 'text-brand-cyan' : 'text-zinc-800'}`}>{s.id}</span>
+                  <p className="text-[8px] font-black italic text-zinc-500 uppercase tracking-tighter leading-none">{s.label}</p>
+                  <p className="text-[9px] font-black italic text-white uppercase leading-tight">{s.t}</p>
                 </div>
              </div>
            ))}
@@ -367,14 +432,15 @@ const SkillsSection: React.FC = () => {
       </div>
     </section>
   );
-}; 
+};
+ 
 
 // --- BonusSection ---
 const BonusSection: React.FC = () => {
   const bonus = [
-    { t: "GERADOR DE PROMPT GRATUITO (PRA QUEM NÃO SABE CRIAR)", p: "R$1.997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/prompt-768x439-1.png" },
-    { t: "CANAL EXCLUSIVO COM DICAS DE USO", p: "R$997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
-    { t: "MINI CURSO GRATUITO", p: "R$297", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Captura-de-tela-2026-01-21-194141.png" }
+    { t: "GERADOR DE PROMPT GRATUITO (PRA QUEM NÃO SABE CRIAR)", p: "R$ 1.997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/prompt-768x439-1.png" },
+    { t: "CANAL EXCLUSIVO COM DICAS DE USO", p: "R$ 997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
+    { t: "MINI CURSO GRATUITO", p: "R$ 297", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Captura-de-tela-2026-01-21-194141.png" }
   ];
   return (
     <section className="py-24 px-6 bg-zinc-950/20 overflow-x-hidden">
@@ -389,18 +455,18 @@ const BonusSection: React.FC = () => {
               className="bg-zinc-900/10 border border-white/5 rounded-3xl overflow-hidden group hover:border-brand-purple/30 transition-all"
             >
               <div className="aspect-[4/3] overflow-hidden grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
-                <img src={b.img} className="w-full h-full object-cover" />
+                <img src={b.img} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <div className="p-8 space-y-6">
                 <h3 className="text-lg md:text-xl font-black italic text-white uppercase tracking-tighter">
                   {b.t}
                 </h3>
                 <div className="flex justify-between items-center pt-6 border-t border-white/10">
-                  <span className="text-sm md:text-base text-zinc-500 line-through italic">
+                  <span className="text-xl md:text-2xl text-zinc-500 line-through italic font-black">
                     {b.p}
                   </span>
-                  <span className="text-brand-cyan font-black italic text-2xl md:text-3xl">
-                    R$ 0,00
+                  <span className="text-brand-cyan font-black italic text-2xl md:text-3xl animate-pulse">
+                    GRATUITO!
                   </span>
                 </div>
               </div>
@@ -421,11 +487,11 @@ const PricingSection: React.FC = () => {
       price: "97,00",
       link: "https://pay.kiwify.com.br/8IDayIy",
       features: [
-        "Chat IA ilimitado",
-      "Gerador de Prompt",
-      "71 Geração de imagem",
-      "12 Gerações de vídeo",
-      "Email + WhatsApp",
+        { t: "Chat IA ilimitado", icon: "💬" },
+        { t: "Gerador de Prompt", icon: "⚡" },
+        { t: "71 Geração de imagem", icon: "🖼️" },
+        { t: "12 Gerações de vídeo", icon: "🎥" },
+        { t: "Email", icon: "📧" },
       ],
     },
     {
@@ -435,11 +501,11 @@ const PricingSection: React.FC = () => {
       link: "https://pay.kiwify.com.br/QnHmsQm",
       isFeatured: true,
       features: [
-        "Chat IA ilimitado",
-      "Gerador de Prompt",
-      "214 Geração de imagem",
-      "37 Gerações de vídeo",
-      "Email + WhatsApp",
+        { t: "Chat IA ilimitado", icon: "💬" },
+        { t: "Gerador de Prompt", icon: "⚡" },
+        { t: "214 Geração de imagem", icon: "🖼️" },
+        { t: "37 Gerações de vídeo", icon: "🎥" },
+        { t: "Email", icon: "📧" },
       ],
     },
     {
@@ -448,18 +514,22 @@ const PricingSection: React.FC = () => {
       price: "697,00",
       link: "https://pay.kiwify.com.br/hOJ3bEi",
       features: [
-       "Chat IA ilimitado",
-      "Gerador de Prompt",
-      "714 Geração de imagem",
-      "125 Gerações de vídeo",
-      "Email + WhatsApp",
+        { t: "Chat IA ilimitado", icon: "💬" },
+        { t: "Gerador de Prompt", icon: "⚡" },
+        { t: "714 Geração de imagem", icon: "🖼️" },
+        { t: "125 Gerações de vídeo", icon: "🎥" },
+        { t: "Email", icon: "📧" },
+        { t: "Comunidade para troca de ideias", icon: "🤝" },
       ],
     },
   ];
 
   return (
     <section id="oferta" className="py-24 md:py-32 px-6 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto space-y-12">
+        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+          ESCOLHA A MELHOR OPÇÃO PARA <br /> SEU NEGOCIO / INSTAGRAM
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 items-stretch">
           {plans.map((plan, i) => (
             <div
@@ -497,23 +567,20 @@ const PricingSection: React.FC = () => {
                 </p>
                 <ul className="space-y-3">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 group">
-                      <svg
-                        className="w-4 h-4 text-brand-purple flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-sm text-zinc-300 font-medium group-hover:text-white transition-colors italic">
-                        {feature}
-                      </span>
+                    <li key={idx} className="flex flex-col gap-1 group">
+                      <div className="flex items-center gap-3">
+                        <span className="text-lg">{feature.icon}</span>
+                        <span className="text-sm text-zinc-300 font-medium group-hover:text-white transition-colors italic">
+                          {feature.t}
+                        </span>
+                      </div>
+                      {feature.t.includes("imagem") && (
+                        <div className="flex flex-wrap gap-1 ml-8 mt-1 opacity-40">
+                          {[...Array(12)].map((_, i) => (
+                            <div key={i} className="w-2 h-2 bg-brand-purple rounded-[1px]"></div>
+                          ))}
+                        </div>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -568,6 +635,7 @@ const AmbassadorSection: React.FC = () => {
             src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Beige-Grey-Neutral-Minimal-Paper-Daily-Motivation-Quote-Your-Story-Video-para-Facebook.png" 
             alt="Embaixador Virtual" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -614,6 +682,7 @@ const AuthorSection: React.FC = () => {
             src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-5.png" 
             alt="co-founder Lucas" 
             className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -693,6 +762,7 @@ const Footer: React.FC = () => {
         src="https://imagem.speakia.ai/wp-content/uploads/2026/01/Design-sem-nome-scaled-e1769270181764.png" 
         alt="SPEAK IA" 
         className="h-7 mx-auto opacity-80 mb-6"
+        referrerPolicy="no-referrer"
       />
       <p className="text-white text-[9px] font-black italic uppercase tracking-[0.2em]">
         © 2025 SPEAK IA. TODOS OS DIREITOS RESERVADOS.
@@ -702,7 +772,7 @@ const Footer: React.FC = () => {
 };
 
 // --- App ---
-const App: React.FC = () => {
+export default function App() {
   return (
     <div className="relative min-h-screen text-brand-offwhite font-sans overflow-x-hidden">
       <div className="aurora-container">
@@ -714,7 +784,9 @@ const App: React.FC = () => {
       <main className="relative z-10">
         <Hero />
         <ProblemsSection />
+        <WhyNotSellSection />
         <ShowcaseCarousel /> 
+        <TestimonialsSection />
         <SkillsSection />
         <BonusSection />
         <PricingSection />
@@ -725,7 +797,7 @@ const App: React.FC = () => {
       <Footer />
     </div>
   );
-};
+}
 
 const container = document.getElementById('root');
 if (container) {
