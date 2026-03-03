@@ -238,11 +238,11 @@ const Hero: React.FC = () => {
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
   const problems = [
-    "A maioria tem medo de usar IA",
-    "A maioria não sabe criar prompt corretamente",
-    "Outras plataformas são difíceis de usar",
-    "O resultado sai genérico e a estética amadora",
-    "Outras plataformas são caras pra acessar"
+    "PRODUTOS",
+    "SERVIÇOS",
+    "INFLUENCER",
+    "EMPRESÁRIOS",
+    "PARA QUEM QUER VENDER SEM APARECER!"
   ];
   return (
     <section className="py-24 px-6 overflow-x-hidden relative">
@@ -254,22 +254,18 @@ const ProblemsSection: React.FC = () => {
           SPEAK AI <br /> 2026 //
         </span>
         <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">
-          EXISTEM ALGUNS <br /> PROBLEMAS
+          PARA QUEM É A SPEAK AI!
         </h2>
       </div>
 
-      <div className="max-w-2xl mx-auto mt-12 space-y-2">
+      {/* Grid de quadrados */}
+      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
         {problems.map((p, i) => (
           <div
             key={i}
-            className="bg-black/40 border border-white/10 p-4 rounded-sm flex items-center gap-4 justify-center group hover:border-cyan-400/40 transition-all duration-300 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)]"
+            className="bg-yellow-400 text-black font-bold uppercase italic p-6 rounded-lg flex items-center justify-center text-center shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] transition-all duration-300"
           >
-            <span className="text-purple-400 font-black italic text-sm drop-shadow-[0_0_6px_rgba(88,38,254,0.8)]">
-              0{i + 1}
-            </span>
-            <span className="text-zinc-200 font-bold uppercase italic text-xs md:text-sm">
-              {p}
-            </span>
+            {p}
           </div>
         ))}
       </div>
