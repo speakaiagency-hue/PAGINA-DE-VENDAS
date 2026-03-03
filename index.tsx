@@ -4,7 +4,8 @@ import { createRoot } from 'react-dom/client';
 // --- Header ---
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
@@ -361,19 +362,18 @@ const ShowcaseCarousel: React.FC = () => {
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
-    { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "CRIAÇÃO DE INFLUENCER" },
-    { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "O PODER DO PROMPT" },
-    { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "RETRATO REALISTA" },
-    { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "VOZ E MOVIMENTO" },
-    { id: "05", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-8.png", t: "EXPANSÃO GLOBAL" },
-    { id: "06", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
+    { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "APRENDA COMO USAR A FERRAMENTA" },
+    { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: ":O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
+    { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "APRENDA A CRIAR IMAGENS" },
+    { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "APRENDA A CRIAR AUDIO E MOVIMENTO" },
+    { id: "06", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" }
   ];
   return (
     <section className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-2">
-            <span className="text-brand-purple text-[9px] font-black uppercase tracking-[0.4em] italic">ESTRUTURA DA</span>
-            <h2 className="text-4xl md:text-5xl font-black italic text-white tracking-tighter">SPEAK IA</h2>
+            <span className="text-brand-purple text-[9px] font-black uppercase tracking-[0.4em] italic">METODOLOGIA DA</span>
+            <h2 className="text-4xl md:text-5xl font-black italic text-white tracking-tighter">SPEAK.IA</h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
            {skills.map((s, i) => (
@@ -391,7 +391,7 @@ const SkillsSection: React.FC = () => {
       </div>
     </section>
   );
-};
+}; 
 
 // --- BonusSection ---
 const BonusSection: React.FC = () => {
