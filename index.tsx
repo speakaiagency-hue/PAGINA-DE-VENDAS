@@ -788,8 +788,8 @@ export default function App() {
         <ShowcaseCarousel /> 
         <TestimonialsSection />
         <SkillsSection />
-        <BonusSection />
         <PricingSection />
+        <BonusSection />
         <AmbassadorSection />
         <AuthorSection />
         <FAQ />
