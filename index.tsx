@@ -328,18 +328,21 @@ const ShowcaseCarousel: React.FC = () => {
   const items = [
     { t: "VIDEOS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
     { t: "CREDIBILIDADE", desc: "PARA SEU INSTAGRAM!" },
-    { t: "COM POUCOS CLIQUES", desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
+    { t: "COM POUCOS CLIQUES", desc: "VOCÊ CRIA SEUS NOVOS CONTEÚDOS!" },
     { t: "IMAGENS PROFISSIONAIS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
     { t: "VENDER E ENGAJAR", desc: "CONSEGUINDO SEM APARECER!" },
     { t: "FACILIDADE", desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
   ];
 
   return (
-   return (
-    <section id="conteúdo" className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10">
+    <section
+      id="conteúdo"
+      className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10"
+    >
+      {/* Glow azul de fundo */}
       <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
-      
+
       <div className="max-w-7xl mx-auto space-y-12 px-6">
         {/* Título principal em azul */}
         <div className="text-center">
@@ -349,13 +352,17 @@ const ShowcaseCarousel: React.FC = () => {
             </h2>
           </div>
         </div>
-        
+
+        {/* Grid de cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden">
           {items.map((it, i) => (
-            <div key={i} className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]">
+            <div
+              key={i}
+              className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]"
+            >
               <div className="space-y-4">
                 <div className="w-8 h-px bg-brand-purple group-hover:w-16 transition-all duration-500"></div>
-                <h3 className="text-xl md:text-2xl font-black italic uppercase text-white leading-tight tracking-tighter">
+                <h3 className="text-xl md:text-2xl font-black italic uppercase text-brand-blue leading-tight tracking-tighter">
                   {it.t}
                 </h3>
               </div>
@@ -369,7 +376,6 @@ const ShowcaseCarousel: React.FC = () => {
     </section>
   );
 };
-
 
 // --- TestimonialsSection ---
 const TestimonialsSection: React.FC = () => {
