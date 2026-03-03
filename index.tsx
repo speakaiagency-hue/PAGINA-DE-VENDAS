@@ -240,12 +240,33 @@ const Hero: React.FC = () => {
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
   const problems = [
-    "PRODUTOS",
-    "SERVIÇOS",
-    "INFLUENCER",
-    "EMPRESÁRIOS",
-    "PARA QUEM QUER VENDER SEM APARECER!"
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4",
+      label: "PRODUTOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4",
+      label: "SERVIÇOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4",
+      label: "INFLUENCER"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4",
+      label: "EMPRESÁRIOS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4",
+      label: "PARA QUEM QUER VENDER SEM APARECER!"
+    }
   ];
+
   return (
     <section className="py-24 px-6 overflow-x-hidden relative">
       {/* Fundo com gradiente neon animado */}
@@ -260,14 +281,32 @@ const ProblemsSection: React.FC = () => {
         </h2>
       </div>
 
-      {/* Grid de quadrados */}
+      {/* Grid de quadrados com imagem e vídeo no hover */}
       <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
         {problems.map((p, i) => (
           <div
             key={i}
-            className="bg-yellow-400 text-black font-bold uppercase italic p-6 rounded-lg flex items-center justify-center text-center shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] transition-all duration-300"
+            className="relative aspect-square rounded-lg overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] group"
           >
-            {p}
+            {/* Imagem padrão */}
+            <img
+              src={p.img}
+              alt={p.label}
+              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+            />
+            {/* Vídeo aparece no hover */}
+            <video
+              src={p.video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            />
+            {/* Label sobreposto */}
+            <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white drop-shadow-lg">
+              {p.label}
+            </div>
           </div>
         ))}
       </div>
