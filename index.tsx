@@ -197,8 +197,6 @@ const Hero: React.FC = () => {
 
           {/* Botão que rola até os planos */}
           <div className="pt-4">
-          {/* Botão que rola até os planos */}
-          <div className="pt-4">
             <button
               onClick={() => scrollTo("planos")}
               className="group relative inline-flex items-center justify-center"
