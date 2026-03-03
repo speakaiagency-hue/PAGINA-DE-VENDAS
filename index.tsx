@@ -295,7 +295,7 @@ const WhyNotSellSection: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter leading-tight">
-            Sabe porque vc nao vende? <br />
+            Sabe porque vc não vende? <br />
             <span className="text-brand-purple">Porque o seu video ainda é muito amador</span>
           </h2>
           <p className="text-zinc-400 text-sm font-bold italic uppercase tracking-wider">
@@ -398,12 +398,11 @@ const TestimonialsSection: React.FC = () => {
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
-    { id: "01", label: "CRIAÇÃO DE INFLUENCER", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "AULA 1: APRENDA COMO USAR A FERRAMENTA" },
-    { id: "02", label: "O PODER DO PROMPT", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "AULA 2: O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
-    { id: "03", label: "RETRATO REALISTA", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "AULA 3: APRENDA A CRIAR IMAGENS" },
-    { id: "04", label: "VOZ E MOVIMENTO", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "AULA 4: APRENDA A CRIAR AUDIO E MOVIMENTO" },
-    { id: "05", label: "EXPANSÃO GLOBAL", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "AULA 5: CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" },
-    { id: "06", label: "MONETIZAÇÃO", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "MONETIZAÇÃO" }
+  { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "AULA 1: APRENDA COMO USAR A FERRAMENTA" },
+  { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "AULA 2: O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
+  { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "AULA 3: APRENDA A CRIAR IMAGENS" },
+  { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "AULA 4: APRENDA A CRIAR AUDIO E MOVIMENTO" },
+  { id: "05", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "AULA 5: CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" }
   ];
   return (
     <section id="sobre" className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
