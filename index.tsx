@@ -185,14 +185,11 @@ const Hero: React.FC = () => {
           </div>
           <div className="space-y-0.5">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-white uppercase block">
-              Crie sua
-            </h1>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[64px] font-black italic tracking-tighter leading-[0.9] text-brand-purple uppercase block">
-              INFLUENCER IA
+              CHEGA DE CONTEÚDOS AMADORES NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
-          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug">
-            Crie seu próprio INFLUENCER com IA. Aulas curtas, diretas e que cabem no seu dia. Conhecimento sem complicação.
+          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug uppercase">
+            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
           </p>
 
           {/* Botão que rola até os planos */}
@@ -233,6 +230,7 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
