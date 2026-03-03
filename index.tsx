@@ -4,8 +4,7 @@ import { createRoot } from 'react-dom/client';
 // --- Header ---
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
