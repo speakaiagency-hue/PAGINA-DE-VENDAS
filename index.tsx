@@ -239,7 +239,7 @@ const Hero: React.FC = () => {
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
-  const problems = [
+  const problems1 = [
     {
       img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg",
       video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4",
@@ -267,168 +267,70 @@ const ProblemsSection: React.FC = () => {
     }
   ];
 
-  return (
-    <section className="py-24 px-6 overflow-x-hidden relative">
-      {/* Fundo com gradiente neon animado */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 animate-gradient-neon"></div>
+  const problems2 = [
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-profissional.mp4",
+      label: "VÍDEOS PROFISSIONAIS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagens-profissionais.mp4",
+      label: "IMAGENS PROFISSIONAIS"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/credibilidade.mp4",
+      label: "CREDIBILIDADE NO INSTAGRAM"
+    },
+    {
+      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.jpg",
+      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/facilidade.mp4",
+      label: "FACILIDADE PARA CRIAR CONTEÚDO"
+    }
+  ];
 
-      <div className="max-w-7xl mx-auto text-center space-y-6">
-        <span className="text-[9px] text-zinc-300 font-black uppercase italic tracking-widest leading-none block drop-shadow-[0_0_8px_rgba(88,38,254,0.8)]">
-          SPEAK AI <br /> 2026 //
-        </span>
-        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">
-          PARA QUEM É A SPEAK AI!
-        </h2>
-      </div>
-
-      {/* Grid de quadrados com imagem e vídeo no hover */}
-      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
-        {problems.map((p, i) => (
-          <div
-            key={i}
-            className="relative aspect-square rounded-lg overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] group"
-          >
-            {/* Imagem padrão */}
-            <img
-              src={p.img}
-              alt={p.label}
-              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-            />
-            {/* Vídeo aparece no hover */}
-            <video
-              src={p.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            />
-            {/* Label sobreposto */}
-            <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white drop-shadow-lg">
-              {p.label}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div
-        id="sobre"
-        className="max-w-7xl mx-auto mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24"
-      >
-        <div className="space-y-6">
-          <h2 className="text-5xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.8] text-white drop-shadow-[0_0_15px_rgba(0,200,255,0.8)]">
-            A <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">SPEAK AI</span> <br /> EXISTE PARA <br /> RESOLVER ISSO
-          </h2>
-        </div>
-        <div className="rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_25px_rgba(0,200,255,0.6)] relative">
+  const renderGrid = (list: typeof problems1, prefix: string) => (
+    <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
+      {list.map((p, i) => (
+        <div
+          key={`${prefix}-${i}`}
+          className="relative aspect-square rounded-lg overflow-hidden border border-white/10 group"
+        >
+          <img
+            src={p.img}
+            alt={p.label}
+            className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
+          />
           <video
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4"
+            src={p.video}
             autoPlay
             loop
             muted
             playsInline
-            className="w-full aspect-video object-cover"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           />
+          <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white">
+            {p.label}
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
-};
-
-// --- ProblemsSection ---
-const ProblemsSection: React.FC = () => {
-  const problems = [
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4",
-      label: "PRODUTOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4",
-      label: "SERVIÇOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4",
-      label: "INFLUENCER"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4",
-      label: "EMPRESÁRIOS"
-    },
-    {
-      img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg",
-      video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4",
-      label: "PARA QUEM QUER VENDER SEM APARECER!"
-    }
-  ];
 
   return (
     <section className="py-24 px-6 overflow-x-hidden relative">
-      {/* Fundo com gradiente neon animado */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-purple-600 via-indigo-500 to-blue-500 animate-gradient-neon"></div>
-
       <div className="max-w-7xl mx-auto text-center space-y-6">
-        <span className="text-[9px] text-zinc-300 font-black uppercase italic tracking-widest leading-none block drop-shadow-[0_0_8px_rgba(88,38,254,0.8)]">
-          SPEAK AI <br /> 2026 //
-        </span>
-        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">
+        <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
           PARA QUEM É A SPEAK AI!
         </h2>
       </div>
 
-      {/* Grid de quadrados com imagem e vídeo no hover */}
-      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 gap-6">
-        {problems.map((p, i) => (
-          <div
-            key={i}
-            className="relative aspect-square rounded-lg overflow-hidden border border-white/10 shadow-[0_0_15px_rgba(88,38,254,0.4)] hover:shadow-[0_0_25px_rgba(0,200,255,0.6)] group"
-          >
-            {/* Imagem padrão */}
-            <img
-              src={p.img}
-              alt={p.label}
-              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-            />
-            {/* Vídeo aparece no hover */}
-            <video
-              src={p.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            />
-            {/* Label sobreposto */}
-            <div className="absolute bottom-2 left-2 right-2 text-center text-xs md:text-sm font-black italic uppercase text-white drop-shadow-lg">
-              {p.label}
-            </div>
-          </div>
-        ))}
-      </div>
+      {/* Primeira grade */}
+      {renderGrid(problems1, "p1")}
 
-      <div
-        id="sobre"
-        className="max-w-7xl mx-auto mt-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24"
-      >
-        <div className="space-y-6">
-          <h2 className="text-5xl lg:text-7xl font-black italic tracking-tighter uppercase leading-[0.8] text-white drop-shadow-[0_0_15px_rgba(0,200,255,0.8)]">
-            A <span className="text-cyan-400 drop-shadow-[0_0_12px_rgba(0,200,255,0.8)]">SPEAK AI</span> <br /> EXISTE PARA <br /> RESOLVER ISSO
-          </h2>
-        </div>
-        <div className="rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_25px_rgba(0,200,255,0.6)] relative">
-          <video
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-pagina.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full aspect-video object-cover"
-          />
-        </div>
-      </div>
+      {/* Segunda grade duplicada */}
+      {renderGrid(problems2, "p2")}
     </section>
   );
 };
@@ -465,16 +367,13 @@ const ShowcaseCarousel: React.FC = () => {
   return (
     <section id="conteudo" className="py-24 bg-black px-6 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
-        {/* Título */}
         <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
           O QUE VOCÊ VAI <br /> CONSEGUIR FAZER?
         </h2>
-
-        {/* Grid de vídeos */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {items.map((it, i) => (
             <div key={i} className="group space-y-3">
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 group-hover:border-brand-purple/50">
                 <video
                   src={it.v}
                   autoPlay
@@ -494,6 +393,7 @@ const ShowcaseCarousel: React.FC = () => {
     </section>
   );
 };
+
 
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
