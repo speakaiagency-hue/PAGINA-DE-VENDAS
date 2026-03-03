@@ -191,10 +191,12 @@ const Hero: React.FC = () => {
               NA SUA REDE SOCIAL E CRIATIVOS!
             </h1>
           </div>
-          <p className="text-xs md:text-sm text-brand-purple font-bold max-w-sm leading-snug uppercase">
-            COM A SPEAK AI VOCÊ VENDE E ENGAJA MAIS COM CONTEÚDOS PROFISSIONAIS
+          <p className="text-xs md:text-sm text-zinc-400 font-bold max-w-sm leading-snug">
+            Com a SPEAK AI você vende e engaja mais com conteúdos PROFISSIONAIS
           </p>
 
+          {/* Botão que rola até os planos */}
+          <div className="pt-4">
           {/* Botão que rola até os planos */}
           <div className="pt-4">
             <button
