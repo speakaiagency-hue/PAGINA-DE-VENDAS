@@ -436,38 +436,66 @@ const ProblemsSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4", t: "Criar uma influencer do zero pra vender pra você" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4", t: "Adicionar seu produto diretamente na influencer" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4", t: "Trocar roupas, cenários, cores, influencer, produtos" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4", t: "Fazer seu próprio Avatar para criar conteúdo pra você" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4", t: "Vender até mesmo sem aparecer" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4", t: "Uma influencer ultra realista" }
-  ];
-
-  const testimonials = [
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/video-bella.mp4", t: "Vídeo da Bella usando para marcar o Gui" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/new-four.mp4", t: "Dono da New Four falando" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/loja-roupa.mp4", t: "Dono de loja online de roupa falando" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/restaurante.mp4", t: "Dono de restaurante falando" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4", t: "Influencer falando que usa e facilita a vida" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/advogado.mp4", t: "Advogado falando sobre nova ideia sem aparecer" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dentista.mp4", t: "Dentista que precisa divulgar serviços e não tem tempo para gravar" },
-    { v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/afiliado.mp4", t: "Afiliado de produtos digitais e físicos usando a ferramenta para vender" }
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Criar-uma-influencer-do-zero-pra-vender-pra-voce.mp4",
+      t: "Criar uma influencer do zero pra vender pra você"
+    },
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/dicionar-seu-produto-diretamente-na-influencer.mp4",
+      t: "Adicionar seu produto diretamente na influencer"
+    },
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Trocar-roupas-cenarios-cores-influencer-produtos.mp4",
+      t: "Trocar roupas, cenários, cores, influencer, produtos"
+    },
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Fazer-seu-proprio-Avatar-para-criar-conteudo-pra-voce.mp4",
+      t: "Fazer seu próprio Avatar para criar conteúdo pra você"
+    },
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Vender-ate-mesmo-sem-aparecer.mp4",
+      t: "Vender até mesmo sem aparecer"
+    },
+    {
+      v: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Uma-influencer-ultra-realista.mp4",
+      t: "Uma influencer ultra realista"
+    }
   ];
 
   return (
-    <>
-      {/* Primeira sessão */}
-      <section id="conteúdo" className="py-24 bg-black px-6 overflow-x-hidden">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
-            O QUE VOCÊ VAI <br/> CONSEGUIR FAZER?
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            {items.map((it, i) => (
-              <div key={i} className="group space-y-3">
-                <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
-                  <video src={it.v} autoPlay loop muted playsInline className="w-full h-full// --- SkillsSection ---
+    <section id="conteudo" className="py-24 bg-black px-6 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto space-y-12">
+        {/* Título */}
+        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+          O QUE VOCÊ VAI <br /> CONSEGUIR FAZER?
+        </h2>
+
+        {/* Grid de vídeos */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {items.map((it, i) => (
+            <div key={i} className="group space-y-3">
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/5 bg-zinc-900 transition-all group-hover:border-brand-purple/50">
+                <video
+                  src={it.v}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-white transition-colors">
+                {it.t}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
     { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "APRENDA COMO USAR A FERRAMENTA" },
