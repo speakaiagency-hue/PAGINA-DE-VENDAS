@@ -534,7 +534,7 @@ const PricingSection: React.FC = () => {
         { t: "Gerador de Prompt", icon: "⚡" },
         { t: "214 Geração de imagem", icon: "🖼️" },
         { t: "37 Gerações de vídeo", icon: "🎥" },
-        { t: "Suporte pelo Whatsapp", icon: "📲" },
+        { t: "Suporte por Whatsapp", icon: "📲" },
       ],
     },
     {
@@ -547,7 +547,7 @@ const PricingSection: React.FC = () => {
         { t: "Gerador de Prompt", icon: "⚡" },
         { t: "714 Geração de imagem", icon: "🖼️" },
         { t: "125 Gerações de vídeo", icon: "🎥" },
-        { t: "Suporte pelo Whatsapp", icon: "📲" },
+        { t: "Suporte por Whatsapp", icon: "📲" },
         { t: "Club VIP SPEAK AI", icon: "🤝" },
       ],
     },
