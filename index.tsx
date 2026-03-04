@@ -256,9 +256,6 @@ const ProblemsSection: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
           PARA QUEM É A SPEAK AI!
         </h2>
-        <p className="text-[10px] text-zinc-500 font-black italic uppercase tracking-widest">
-          APARECER EXEMPLOS QUANDO PASSAR O MOUSE ENCIMA DE CADA QUADRANTE!
-        </p>
       </div>
 
       <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
