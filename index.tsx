@@ -415,37 +415,51 @@ const TestimonialsSection: React.FC = () => {
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
-  { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "AULA 1: APRENDA COMO USAR A FERRAMENTA" },
-  { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "AULA 2: O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
-  { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "AULA 3: APRENDA A CRIAR IMAGENS" },
-  { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "AULA 4: APRENDA A CRIAR AUDIO E MOVIMENTO" },
-  { id: "05", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "AULA 5: CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" }
+    { id: "01", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-585x1024-1.png", t: "AULA 1: APRENDA COMO USAR A FERRAMENTA" },
+    { id: "02", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-1-585x1024-1.png", t: "AULA 2: O PODER DA SPEAK.AI NO SEU NEGOCIO/INSTAGRAM" },
+    { id: "03", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-3.png", t: "AULA 3: APRENDA A CRIAR IMAGENS" },
+    { id: "04", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-6.png", t: "AULA 4: APRENDA A CRIAR AUDIO E MOVIMENTO" },
+    { id: "05", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/imagem-0-9.png", t: "AULA 5: CRIE VIDEOS REALISTAS PARA SEU NEGOCIO/INSTAGRAM" }
   ];
+
   return (
     <section id="sobre" className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-2">
-            <span className="text-brand-purple text-[9px] font-black uppercase tracking-[0.4em] italic">METODOLOGIA DA</span>
-            <h2 className="text-4xl md:text-5xl font-black italic text-white tracking-tighter">SPEAK.IA</h2>
+          <span className="text-[#7D3AC1] text-[9px] font-black uppercase tracking-[0.4em] italic">
+            METODOLOGIA DA
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black italic text-white tracking-tighter">
+            SPEAK.IA
+          </h2>
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-           {skills.map((s, i) => (
-             <div key={i} className="space-y-4 group">
-                <div className={`aspect-[4/5] rounded-2xl overflow-hidden border-2 transition-all duration-500 ${i === 1 ? 'border-brand-cyan shadow-xl shadow-brand-cyan/10' : 'border-white/5 grayscale group-hover:grayscale-0'}`}>
-                   <img src={s.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform" referrerPolicy="no-referrer" />
-                </div>
-                <div className="text-center space-y-1">
-                  <span className={`text-2xl font-black italic ${i === 1 ? 'text-brand-cyan' : 'text-zinc-800'}`}>{s.id}</span>
-                  <p className="text-[8px] font-black italic text-zinc-500 uppercase tracking-tighter leading-none">{s.label}</p>
-                  <p className="text-[9px] font-black italic text-white uppercase leading-tight">{s.t}</p>
-                </div>
-             </div>
-           ))}
+          {skills.map((s, i) => (
+            <div key={i} className="space-y-4">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/5">
+                <img
+                  src={s.img}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div className="text-center space-y-1">
+                <span className="text-2xl font-black italic text-white">
+                  {s.id}
+                </span>
+                <p className="text-[9px] font-black italic text-white uppercase leading-tight">
+                  {s.t}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
+
  
 
 // --- BonusSection ---
@@ -504,7 +518,7 @@ const PricingSection: React.FC = () => {
         { t: "Gerador de Prompt", icon: "⚡" },
         { t: "71 Geração de imagem", icon: "🖼️" },
         { t: "12 Gerações de vídeo", icon: "🎥" },
-        { t: "Email", icon: "📧" },
+        { t: "Suporte por E-mail", icon: "📧" },
       ],
     },
     {
@@ -518,7 +532,7 @@ const PricingSection: React.FC = () => {
         { t: "Gerador de Prompt", icon: "⚡" },
         { t: "214 Geração de imagem", icon: "🖼️" },
         { t: "37 Gerações de vídeo", icon: "🎥" },
-        { t: "Email", icon: "📧" },
+        { t: "Suporte pelo Whatsapp", icon: "📲" },
       ],
     },
     {
@@ -531,8 +545,8 @@ const PricingSection: React.FC = () => {
         { t: "Gerador de Prompt", icon: "⚡" },
         { t: "714 Geração de imagem", icon: "🖼️" },
         { t: "125 Gerações de vídeo", icon: "🎥" },
-        { t: "Email", icon: "📧" },
-        { t: "Comunidade para troca de ideias", icon: "🤝" },
+        { t: "Suporte pelo Whatsapp", icon: "📲" },
+        { t: "Club VIP SPEAK AI", icon: "🤝" },
       ],
     },
   ];
