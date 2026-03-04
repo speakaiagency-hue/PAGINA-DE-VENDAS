@@ -433,9 +433,9 @@ const SkillsSection: React.FC = () => {
         </div>
 
         {/* Grid centralizada */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 place-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 place-items-center">
           {skills.map((s, i) => (
-            <div key={i} className="space-y-4 flex flex-col items-center text-center">
+            <div key={i} className="flex flex-col items-center text-center space-y-4">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/5 flex items-center justify-center">
                 <img
                   src={s.img}
