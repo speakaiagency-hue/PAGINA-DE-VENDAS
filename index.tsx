@@ -425,6 +425,7 @@ const SkillsSection: React.FC = () => {
   return (
     <section id="sobre" className="py-24 px-6 border-t border-white/5 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-16">
+        {/* Título centralizado */}
         <div className="text-center space-y-2">
           <span className="text-[#7D3AC1] text-[9px] font-black uppercase tracking-[0.4em] italic">
             METODOLOGIA DA
@@ -434,17 +435,18 @@ const SkillsSection: React.FC = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {/* Grid centralizada */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 place-items-center">
           {skills.map((s, i) => (
-            <div key={i} className="space-y-4">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/5">
+            <div key={i} className="space-y-4 flex flex-col items-center text-center">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/5 flex items-center justify-center">
                 <img
                   src={s.img}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="text-center space-y-1">
+              <div className="space-y-1">
                 <span className="text-2xl font-black italic text-white">
                   {s.id}
                 </span>
