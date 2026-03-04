@@ -468,30 +468,40 @@ const BonusSection: React.FC = () => {
     { t: "CANAL EXCLUSIVO COM DICAS DE USO", p: "R$ 997", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/CANAL-EXCLUSIVO-1024x585-1.png" },
     { t: "MINI CURSO GRATUITO", p: "R$ 297", img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/Captura-de-tela-2026-01-21-194141.png" }
   ];
+
   return (
     <section className="py-24 px-6 bg-zinc-950/20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
         <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
           BÔNUS EXCLUSIVOS
         </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {bonus.map((b, i) => (
             <div
               key={i}
-              className="bg-zinc-900/10 border border-white/5 rounded-3xl overflow-hidden group hover:border-brand-purple/30 transition-all"
+              className="bg-zinc-900/10 border border-white/5 rounded-3xl overflow-hidden"
             >
-              <div className="aspect-[4/3] overflow-hidden grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all">
-                <img src={b.img} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+              {/* Imagem normal, sem efeito */}
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={b.img}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
-              <div className="p-8 space-y-6">
+
+              <div className="p-8 space-y-6 text-center">
                 <h3 className="text-lg md:text-xl font-black italic text-white uppercase tracking-tighter">
                   {b.t}
                 </h3>
-                <div className="flex justify-between items-center pt-6 border-t border-white/10">
-                  <span className="text-xl md:text-2xl text-zinc-500 line-through italic font-black">
+
+                {/* Valor em vermelho, maior, acima do gratuito */}
+                <div className="pt-6 border-t border-white/10 space-y-2">
+                  <span className="block text-3xl md:text-4xl text-red-600 line-through italic font-black">
                     {b.p}
                   </span>
-                  <span className="text-brand-cyan font-black italic text-2xl md:text-3xl animate-pulse">
+                  <span className="block text-xl md:text-2xl text-blue-500 font-black italic">
                     GRATUITO!
                   </span>
                 </div>
@@ -503,6 +513,7 @@ const BonusSection: React.FC = () => {
     </section>
   );
 };
+
 
 // --- PricingSection ---
 const PricingSection: React.FC = () => {
