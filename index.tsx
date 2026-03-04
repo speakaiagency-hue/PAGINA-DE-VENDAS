@@ -496,12 +496,12 @@ const BonusSection: React.FC = () => {
                   {b.t}
                 </h3>
 
-                {/* Valor em vermelho, maior, acima do gratuito */}
+                {/* Valor em vermelho, menor, acima do gratuito */}
                 <div className="pt-6 border-t border-white/10 space-y-2">
-                  <span className="block text-3xl md:text-4xl text-red-600 line-through italic font-black">
+                  <span className="block text-xl md:text-2xl text-red-600 line-through italic font-black">
                     {b.p}
                   </span>
-                  <span className="block text-xl md:text-2xl text-blue-500 font-black italic">
+                  <span className="block text-lg md:text-xl text-blue-500 font-black italic">
                     GRATUITO!
                   </span>
                 </div>
@@ -513,7 +513,6 @@ const BonusSection: React.FC = () => {
     </section>
   );
 };
-
 
 // --- PricingSection ---
 const PricingSection: React.FC = () => {
