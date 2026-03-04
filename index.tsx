@@ -205,7 +205,7 @@ const Hero: React.FC = () => {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-[#7D3AC1] rounded-sm blur-md opacity-20 group-hover:opacity-100 transition duration-700"></div>
               <span className="relative inline-flex bg-gradient-to-r from-brand-blue to-[#7D3AC1] text-white px-7 py-3.5 text-sm font-black italic uppercase tracking-tighter transition-all hover:scale-105 shadow-lg">
-                COMECE AGORA!
+                ASSINAR AGORA!
               </span>
             </button>
           </div>
