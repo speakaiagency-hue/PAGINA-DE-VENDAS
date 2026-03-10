@@ -241,9 +241,6 @@ const Hero: React.FC = () => {
 
 
 // --- ProblemsSection ---
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-
 const ProblemsSection: React.FC = () => {
   const problems = [
     {
@@ -287,7 +284,6 @@ const ProblemsSection: React.FC = () => {
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/005.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/006.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/007.jpeg",
-
       ],
     },
     {
@@ -319,18 +315,19 @@ const ProblemsSection: React.FC = () => {
             key={i}
             className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900"
           >
-            <Swiper spaceBetween={10} slidesPerView={1} loop>
-              {p.images.map((img, idx) => (
-                <SwiperSlide key={idx}>
+            <div className="w-full h-full overflow-hidden">
+              <div className="flex animate-slide">
+                {p.images.map((img, idx) => (
                   <img
+                    key={idx}
                     src={img}
                     alt={`${p.label} ${idx + 1}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover flex-shrink-0"
                     referrerPolicy="no-referrer"
                   />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                ))}
+              </div>
+            </div>
             <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
               <div className="text-center text-[9px] md:text-[10px] font-black italic uppercase text-white leading-tight">
                 {p.label}
@@ -342,6 +339,7 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
+
 
 // --- WhyNotSellSection ---
 const WhyNotSellSection: React.FC = () => {
