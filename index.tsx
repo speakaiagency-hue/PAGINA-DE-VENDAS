@@ -325,7 +325,6 @@ const ProblemsSection: React.FC = () => {
 
           .slide-fastest {
             display: flex;
-            width: max-content;
             animation: slide 20s linear infinite;
           }
 
@@ -333,7 +332,7 @@ const ProblemsSection: React.FC = () => {
             flex-shrink: 0;
             width: 100%;   /* imagem ocupa a largura do card */
             height: 100%;  /* imagem ocupa a altura do card */
-            object-fit: cover;
+            object-fit: cover; /* mantém proporção sem distorcer */
           }
 
           .slide-fastest:hover {
@@ -379,7 +378,6 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
-
 
 // --- WhyNotSellSection ---
 const WhyNotSellSection: React.FC = () => {
