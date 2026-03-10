@@ -296,6 +296,7 @@ const ProblemsSection: React.FC = () => {
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/12.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/13.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/14.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/15.jpeg",
       ],
     },
     {
