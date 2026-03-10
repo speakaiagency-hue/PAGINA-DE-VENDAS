@@ -1,6 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 
+// --- RotatingCard ---
+const RotatingCard: React.FC<{ images: string[]; label: string }> = ({ images, label }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="group relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/5 bg-zinc-900/50">
+      <div className="absolute inset-0 transition-opacity duration-1000">
+        {images.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={label}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              idx === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            referrerPolicy="no-referrer"
+          />
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+      <div className="absolute bottom-6 left-6 right-6">
+        <p className="text-sm font-black italic uppercase text-white tracking-widest">{label}</p>
+      </div>
+    </div>
+  );
+};
+
 // --- Header ---
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -237,9 +271,6 @@ const Hero: React.FC = () => {
   );
 };
 
-
-
-
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
   const problems = [
@@ -345,7 +376,7 @@ const WhyNotSellSection: React.FC = () => {
             A SPEAK AI VEIO PARA RESOLVER ISSO!
           </p>
         </div>
-        <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-brand-purple/30 shadow-[0_0_50px_rgba(88,38,254,0.1)] bg-zinc-900">
+        <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-brand-purple/30 shadow-[0_0_50px_rgba(88,38,254,0.15)] bg-zinc-900">
           <div className="absolute inset-0 flex items-center justify-center text-center p-8">
              <p className="text-white font-black italic uppercase text-sm tracking-widest">
                 VIDEO SIMULANDO O USO DA FERRAMENTA! <br /> E LIKES E VENDAS SENDO REALIZADAS!
@@ -369,12 +400,12 @@ const WhyNotSellSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { desc: "PARA SEU INSTAGRAM!" },
-    { desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
-    { desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { desc: "CONSEGUINDO SEM APARECER!" },
-    { desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
+    { t: "ENGAJAMENTO", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { t: "INSTAGRAM", desc: "PARA SEU INSTAGRAM!" },
+    { t: "CRIAÇÃO", desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
+    { t: "VENDAS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
+    { t: "ANÔNIMO", desc: "CONSEGUINDO SEM APARECER!" },
+    { t: "TEMAS", desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
   ];
 
 return (
@@ -499,8 +530,6 @@ const SkillsSection: React.FC = () => {
     </section>
   );
 };
-
- 
 
 // --- BonusSection ---
 const BonusSection: React.FC = () => {
@@ -875,6 +904,7 @@ export default function App() {
     </div>
   );
 }
+
 
 const container = document.getElementById('root');
 if (container) {
