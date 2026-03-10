@@ -284,6 +284,18 @@ const ProblemsSection: React.FC = () => {
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/005.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/006.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/007.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/008.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/009.jpeg",
+      ],
+    },
+    {
+      label: "PARA QUEM QUER VENDER SEM APARECER!",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/10.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/11.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/12.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/13.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/14.jpeg",
       ],
     },
     {
