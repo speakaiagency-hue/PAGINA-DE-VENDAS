@@ -241,13 +241,68 @@ const Hero: React.FC = () => {
 
 
 // --- ProblemsSection ---
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 const ProblemsSection: React.FC = () => {
   const problems = [
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/produtos.mp4", label: "PRODUTOS" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/servicos.mp4", label: "SERVIÇOS" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/influencer.mp4", label: "INFLUENCER" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/empresarios.mp4", label: "EMPRESÁRIOS" },
-    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.jpg", video: "https://imagem.speakia.ai/wp-content/uploads/2026/01/sem-aparecer.mp4", label: "PARA QUEM QUER VENDER SEM APARECER!" }
+    {
+      label: "PRODUTOS",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/1.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/2.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/3.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/4.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/5.jpeg",
+      ],
+    },
+    {
+      label: "SERVIÇOS",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/2-1.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/3-1.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/4-1.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/5.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/6.jpeg",
+      ],
+    },
+    {
+      label: "INFLUENCER",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/01.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/02.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/03.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/04.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/05.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/06.jpeg",
+      ],
+    },
+    {
+      label: "EMPRESÁRIOS",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/001.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/002.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/003.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/004.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/005.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/006.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/007.jpeg",
+
+      ],
+    },
+    {
+      label: "UGC",
+      images: [
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-1.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-2.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-3.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-4.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-5.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-6.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-7.jpeg",
+        "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-8.jpeg",
+      ],
+    },
   ];
 
   return (
@@ -262,22 +317,20 @@ const ProblemsSection: React.FC = () => {
         {problems.map((p, i) => (
           <div
             key={i}
-            className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 group bg-zinc-900"
+            className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900"
           >
-            <img
-              src={p.img}
-              alt={p.label}
-              className="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0"
-              referrerPolicy="no-referrer"
-            />
-            <video
-              src={p.video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            />
+            <Swiper spaceBetween={10} slidesPerView={1} loop>
+              {p.images.map((img, idx) => (
+                <SwiperSlide key={idx}>
+                  <img
+                    src={img}
+                    alt={`${p.label} ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
             <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
               <div className="text-center text-[9px] md:text-[10px] font-black italic uppercase text-white leading-tight">
                 {p.label}
