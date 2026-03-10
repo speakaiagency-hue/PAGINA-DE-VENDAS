@@ -245,7 +245,6 @@ const ProblemsSection: React.FC = () => {
   const problems = [
     {
       label: "PRODUTOS",
-      speed: "slide-slow", // velocidade lenta
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/2.jpeg",
@@ -256,7 +255,6 @@ const ProblemsSection: React.FC = () => {
     },
     {
       label: "SERVIÇOS",
-      speed: "slide-medium", // velocidade média
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/2-1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/3-1.jpeg",
@@ -267,7 +265,6 @@ const ProblemsSection: React.FC = () => {
     },
     {
       label: "INFLUENCER",
-      speed: "slide-fast", // velocidade rápida
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/01.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/02.jpeg",
@@ -279,7 +276,6 @@ const ProblemsSection: React.FC = () => {
     },
     {
       label: "EMPRESÁRIOS",
-      speed: "slide-slowest", // bem devagar
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/001.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/002.jpeg",
@@ -294,7 +290,6 @@ const ProblemsSection: React.FC = () => {
     },
     {
       label: "PARA QUEM QUER VENDER SEM APARECER!",
-      speed: "slide-medium",
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/10.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/11.jpeg",
@@ -306,7 +301,6 @@ const ProblemsSection: React.FC = () => {
     },
     {
       label: "UGC",
-      speed: "slide-fastest", // mais rápido
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-2.jpeg",
@@ -329,30 +323,10 @@ const ProblemsSection: React.FC = () => {
             100% { transform: translateX(-100%); }
           }
 
-          .slide-slowest {
-            animation: slide 40s linear infinite;
-          }
-
-          .slide-slow {
-            animation: slide 30s linear infinite;
-          }
-
-          .slide-medium {
-            animation: slide 20s linear infinite;
-          }
-
-          .slide-fast {
-            animation: slide 12s linear infinite;
-          }
-
           .slide-fastest {
             animation: slide 8s linear infinite;
           }
 
-          .slide-slowest:hover,
-          .slide-slow:hover,
-          .slide-medium:hover,
-          .slide-fast:hover,
           .slide-fastest:hover {
             animation-play-state: paused;
           }
@@ -373,8 +347,8 @@ const ProblemsSection: React.FC = () => {
             className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900"
           >
             <div className="w-full h-full overflow-hidden">
-              {/* carrossel em loop com velocidade específica */}
-              <div className={`flex ${p.speed}`}>
+              {/* carrossel em loop com mesma velocidade para todos */}
+              <div className="flex slide-fastest">
                 {p.images.concat(p.images).map((img, idx) => (
                   <img
                     key={idx}
@@ -397,6 +371,7 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
+
 
 // --- WhyNotSellSection ---
 const WhyNotSellSection: React.FC = () => {
