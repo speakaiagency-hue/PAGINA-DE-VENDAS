@@ -325,8 +325,15 @@ const ProblemsSection: React.FC = () => {
 
           .slide-fastest {
             display: flex;
-            width: max-content; /* garante largura suficiente para todas imagens */
+            width: max-content; /* largura ajustada ao número de imagens */
             animation: slide 20s linear infinite;
+          }
+
+          .slide-fastest img {
+            width: 100%; /* cada imagem ocupa o tamanho do card */
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
           }
 
           .slide-fastest:hover {
@@ -356,8 +363,6 @@ const ProblemsSection: React.FC = () => {
                     key={idx}
                     src={img}
                     alt={`${p.label} ${idx + 1}`}
-                    className="h-full object-cover flex-shrink-0"
-                    style={{ width: "100%" }}
                     referrerPolicy="no-referrer"
                   />
                 ))}
@@ -374,6 +379,7 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
+
 
 // --- WhyNotSellSection ---
 const WhyNotSellSection: React.FC = () => {
