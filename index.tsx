@@ -242,41 +242,6 @@ const Hero: React.FC = () => {
 
 // --- ProblemsSection ---
 const ProblemsSection: React.FC = () => {
-  const RotatingCard: React.FC<{ images: string[]; label: string }> = ({ images, label }) => {
-    const [index, setIndex] = React.useState(0);
-
-    React.useEffect(() => {
-      const timer = setInterval(() => {
-        setIndex((prev) => (prev + 1) % images.length);
-      }, 3000); // troca a cada 3 segundos
-      return () => clearInterval(timer);
-    }, [images.length]);
-
-    return (
-      <div className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900 group">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={index}
-            src={images[index]}
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 1, ease: "easeInOut" }}
-            className="absolute inset-0 w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-        </AnimatePresence>
-
-        {/* Overlay com gradiente e label */}
-        <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black via-black/40 to-transparent z-10">
-          <div className="text-center text-[11px] md:text-[13px] font-black italic uppercase text-white leading-tight tracking-[0.2em]">
-            {label}
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   const problems = [
     {
       label: "PRODUTOS",
