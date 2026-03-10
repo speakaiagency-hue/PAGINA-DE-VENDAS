@@ -322,6 +322,43 @@ const ProblemsSection: React.FC = () => {
 
   return (
     <section className="py-24 px-6 overflow-x-hidden relative">
+      <style>
+        {`
+          @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+          }
+
+          .slide-slowest {
+            animation: slide 40s linear infinite;
+          }
+
+          .slide-slow {
+            animation: slide 30s linear infinite;
+          }
+
+          .slide-medium {
+            animation: slide 20s linear infinite;
+          }
+
+          .slide-fast {
+            animation: slide 12s linear infinite;
+          }
+
+          .slide-fastest {
+            animation: slide 8s linear infinite;
+          }
+
+          .slide-slowest:hover,
+          .slide-slow:hover,
+          .slide-medium:hover,
+          .slide-fast:hover,
+          .slide-fastest:hover {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
+
       <div className="max-w-7xl mx-auto text-center space-y-6">
         <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter">
           PARA QUEM É A SPEAK AI!
