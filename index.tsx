@@ -324,7 +324,8 @@ const ProblemsSection: React.FC = () => {
           }
 
           .slide-fastest {
-            animation: slide 8s linear infinite;
+            display: flex;
+            animation: slide 12s linear infinite;
           }
 
           .slide-fastest:hover {
@@ -347,8 +348,8 @@ const ProblemsSection: React.FC = () => {
             className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900"
           >
             <div className="w-full h-full overflow-hidden">
-              {/* carrossel em loop com mesma velocidade para todos */}
-              <div className="flex slide-fastest">
+              {/* carrossel em loop passando todas as imagens do card */}
+              <div className="slide-fastest">
                 {p.images.concat(p.images).map((img, idx) => (
                   <img
                     key={idx}
@@ -371,6 +372,7 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
+
 
 
 // --- WhyNotSellSection ---
