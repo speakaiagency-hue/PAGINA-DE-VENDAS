@@ -382,7 +382,7 @@ const WhyNotSellSection: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tighter leading-tight">
-            Sabe porque vc não vende? <br />
+            Sabe porque você não vende? <br />
             <span className="text-brand-purple">Porque o seu video ainda é muito amador</span>
           </h2>
           <p className="text-zinc-400 text-sm font-bold italic uppercase tracking-wider">
