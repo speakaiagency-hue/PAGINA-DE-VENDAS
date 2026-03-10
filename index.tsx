@@ -320,12 +320,13 @@ const ProblemsSection: React.FC = () => {
         {`
           @keyframes slide {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(-50%); } /* percorre metade porque duplicamos o array */
           }
 
           .slide-fastest {
             display: flex;
-            animation: slide 12s linear infinite;
+            width: max-content; /* garante largura suficiente para todas imagens */
+            animation: slide 20s linear infinite;
           }
 
           .slide-fastest:hover {
@@ -355,7 +356,8 @@ const ProblemsSection: React.FC = () => {
                     key={idx}
                     src={img}
                     alt={`${p.label} ${idx + 1}`}
-                    className="w-full h-full object-cover flex-shrink-0"
+                    className="h-full object-cover flex-shrink-0"
+                    style={{ width: "100%" }}
                     referrerPolicy="no-referrer"
                   />
                 ))}
@@ -372,8 +374,6 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
-
-
 
 // --- WhyNotSellSection ---
 const WhyNotSellSection: React.FC = () => {
