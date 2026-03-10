@@ -325,14 +325,15 @@ const ProblemsSection: React.FC = () => {
 
           .slide-fastest {
             display: flex;
-            animation: slide 20s linear infinite;
+            width: max-content; /* largura ajustada ao número de imagens */
+            animation: slide 25s linear infinite;
           }
 
           .slide-fastest img {
             flex-shrink: 0;
-            width: 100%;   /* imagem ocupa a largura do card */
-            height: 100%;  /* imagem ocupa a altura do card */
-            object-fit: cover; /* mantém proporção sem distorcer */
+            width: 100%;   /* cada imagem ocupa a largura do card */
+            height: 100%;  /* cada imagem ocupa a altura do card */
+            object-fit: cover;
           }
 
           .slide-fastest:hover {
