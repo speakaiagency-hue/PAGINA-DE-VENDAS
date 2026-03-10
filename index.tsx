@@ -322,15 +322,17 @@ const ProblemsSection: React.FC = () => {
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      {/* grid 3 em cima e 3 em baixo */}
+      <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
         {problems.map((p, i) => (
           <div
             key={i}
             className="relative aspect-[3/4] rounded-lg overflow-hidden border border-white/10 bg-zinc-900"
           >
             <div className="w-full h-full overflow-hidden">
+              {/* carrossel em loop */}
               <div className="flex animate-slide">
-                {p.images.map((img, idx) => (
+                {p.images.concat(p.images).map((img, idx) => (
                   <img
                     key={idx}
                     src={img}
@@ -352,6 +354,7 @@ const ProblemsSection: React.FC = () => {
     </section>
   );
 };
+
 
 
 // --- WhyNotSellSection ---
