@@ -376,15 +376,11 @@ const WhyNotSellSection: React.FC = () => {
             A SPEAK AI VEIO PARA RESOLVER ISSO!
           </p>
         </div>
+
+        {/* Vídeo sem texto sobreposto */}
         <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-brand-purple/30 shadow-[0_0_50px_rgba(88,38,254,0.15)] bg-zinc-900">
-          <div className="absolute inset-0 flex items-center justify-center text-center p-8">
-             <p className="text-white font-black italic uppercase text-sm tracking-widest">
-                VIDEO SIMULANDO O USO DA FERRAMENTA! <br /> E LIKES E VENDAS SENDO REALIZADAS!
-             </p>
-          </div>
-          {/* Placeholder for the actual simulation video */}
           <video
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
             src="https://imagem.speakia.ai/wp-content/uploads/2026/04/BELLA-2.mp4"
             autoPlay
             loop
