@@ -250,7 +250,7 @@ const Hero: React.FC = () => {
           <div className="relative rounded-[2rem] overflow-hidden aspect-video border border-white/5 shadow-xl bg-zinc-950">
             <video
               className="w-full h-full object-cover"
-              src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4"
+              src="https://imagem.speakia.ai/wp-content/uploads/2026/04/BELLA.mp4"
               autoPlay
               loop
               muted
@@ -275,7 +275,7 @@ const Hero: React.FC = () => {
 const ProblemsSection: React.FC = () => {
   const problems = [
     {
-      label: "PRODUTOS",
+      label: "PARA VENDER SEUS PRODUTOS",
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/2.jpeg",
@@ -285,7 +285,7 @@ const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      label: "SERVIÇOS",
+      label: "PARA VENDER SEUS SERVIÇOS",
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/2-1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/3-1.jpeg",
@@ -331,7 +331,7 @@ const ProblemsSection: React.FC = () => {
       ],
     },
     {
-      label: "UGC",
+      label: "CRIE CONTEÚDOS PARA SUA MARCA",
       images: [
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-1.jpeg",
         "https://imagem.speakia.ai/wp-content/uploads/2026/03/0-2.jpeg",
@@ -385,7 +385,7 @@ const WhyNotSellSection: React.FC = () => {
           {/* Placeholder for the actual simulation video */}
           <video
             className="w-full h-full object-cover opacity-40"
-            src="https://imagem.speakia.ai/wp-content/uploads/2026/01/video-tela-pagina-de-vendas.mp4"
+            src="https://imagem.speakia.ai/wp-content/uploads/2026/04/BELLA-2.mp4"
             autoPlay
             loop
             muted
@@ -400,20 +400,23 @@ const WhyNotSellSection: React.FC = () => {
 // --- ShowcaseCarousel ---
 const ShowcaseCarousel: React.FC = () => {
   const items = [
-    { t: "ENGAJAMENTO", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { t: "INSTAGRAM", desc: "PARA SEU INSTAGRAM!" },
-    { t: "CRIAÇÃO", desc: "VOCÊ CRIA SEUS NOVOS CONTEUDOS!" },
-    { t: "VENDAS", desc: "ALTO PODER DE ENGAJAMENTO E OU VENDA!" },
-    { t: "ANÔNIMO", desc: "CONSEGUINDO SEM APARECER!" },
-    { t: "TEMAS", desc: "FALE SOBRE QUALQUER TEMA COM A SPEAK.AI" }
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/1.jpeg" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/2.jpeg" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/3.jpeg" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/4.jpeg" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/5.jpeg" },
+    { img: "https://imagem.speakia.ai/wp-content/uploads/2026/04/6.jpeg" }
   ];
 
-return (
-    <section id="conteúdo" className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10">
+  return (
+    <section
+      id="conteúdo"
+      className="py-24 bg-[#080a1a] relative overflow-x-hidden border-y border-brand-blue/10"
+    >
       {/* Glow azul de fundo */}
       <div className="absolute inset-0 bg-brand-blue/5 pointer-events-none"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-blue/10 blur-[150px] -z-10 rounded-full"></div>
-      
+
       <div className="max-w-7xl mx-auto space-y-12 px-6">
         {/* Título principal em azul */}
         <div className="text-center">
@@ -424,19 +427,18 @@ return (
           </div>
         </div>
 
-        
+        {/* Grid de imagens */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5 rounded-3xl overflow-hidden">
           {items.map((it, i) => (
-            <div key={i} className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex flex-col justify-between min-h-[240px]">
-              <div className="space-y-4">
-                <div className="w-8 h-px bg-brand-purple group-hover:w-16 transition-all duration-500"></div>
-                <h3 className="text-xl md:text-2xl font-black italic uppercase text-white leading-tight tracking-tighter">
-                  {it.t}
-                </h3>
-              </div>
-              <p className="text-[10px] md:text-[11px] font-black italic uppercase text-zinc-500 group-hover:text-brand-cyan transition-colors tracking-widest">
-                {it.desc}
-              </p>
+            <div
+              key={i}
+              className="group bg-black p-10 hover:bg-zinc-900/30 transition-all duration-500 flex items-center justify-center min-h-[240px]"
+            >
+              <img
+                src={it.img}
+                alt={`Item ${i}`}
+                className="w-full h-full object-contain"
+              />
             </div>
           ))}
         </div>
