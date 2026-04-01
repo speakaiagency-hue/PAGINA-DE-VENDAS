@@ -251,10 +251,7 @@ const Hero: React.FC = () => {
             <video
               className="w-full h-full object-cover"
               src="https://imagem.speakia.ai/wp-content/uploads/2026/04/BELLA.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
+              controls
             ></video>
             <div className="absolute bottom-6 right-6 w-20 h-20 animate-float pointer-events-none">
               <img
@@ -382,10 +379,7 @@ const WhyNotSellSection: React.FC = () => {
           <video
             className="w-full h-full object-cover"
             src="https://imagem.speakia.ai/wp-content/uploads/2026/04/BELLA-2.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+            controls
           ></video>
         </div>
       </div>
