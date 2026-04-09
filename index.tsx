@@ -445,8 +445,8 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 px-4 bg-zinc-950 overflow-x-hidden">
-      <div className="max-w-5xl mx-auto space-y-8">
+    <section className="py-16 px-4 bg-zinc-950 overflow-x-hidden">
+      <div className="max-w-5xl mx-auto space-y-10">
         <h2 className="text-3xl md:text-4xl font-black italic text-center text-white uppercase tracking-tighter">
           VEJA O QUE OS CLIENTES DA SPEAK-AI <br /> FALAM SOBRE O NOSSO PRODUTO!
         </h2>
@@ -454,7 +454,7 @@ const TestimonialsSection: React.FC = () => {
           {images.map((src, i) => (
             <div
               key={i}
-              className="aspect-[4/3] max-w-sm mx-auto bg-zinc-900 border border-white/5 rounded-xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
+              className="aspect-[4/3] max-w-md mx-auto bg-zinc-900 border border-white/5 rounded-xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
             >
               <img
                 src={src}
