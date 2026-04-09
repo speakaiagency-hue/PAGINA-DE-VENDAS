@@ -440,26 +440,26 @@ const ShowcaseCarousel: React.FC = () => {
 // --- TestimonialsSection ---
 const TestimonialsSection: React.FC = () => {
   const images = [
-    "https://imagem.speakia.ai/wp-content/uploads/2026/04/testimonial1.jpg",
-    "https://imagem.speakia.ai/wp-content/uploads/2026/04/testimonial2.jpg"
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/image.jpeg",
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/imagem.jpeg"
   ];
 
   return (
-    <section className="py-24 px-6 bg-zinc-950 overflow-x-hidden">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
+    <section className="py-20 px-4 bg-zinc-950 overflow-x-hidden">
+      <div className="max-w-5xl mx-auto space-y-10">
+        <h2 className="text-3xl md:text-4xl font-black italic text-center text-white uppercase tracking-tighter">
           VEJA O QUE OS CLIENTES DA SPEAK-AI <br /> FALAM SOBRE O NOSSO PRODUTO!
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {images.map((src, i) => (
             <div
               key={i}
-              className="aspect-[4/3] bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
+              className="aspect-[4/3] max-w-sm mx-auto bg-zinc-900 border border-white/5 rounded-xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
             >
               <img
                 src={src}
                 alt={`Depoimento ${i + 1}`}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-xl"
               />
             </div>
           ))}
