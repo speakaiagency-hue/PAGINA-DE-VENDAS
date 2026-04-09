@@ -439,9 +439,9 @@ const ShowcaseCarousel: React.FC = () => {
 
 // --- TestimonialsSection ---
 const TestimonialsSection: React.FC = () => {
-  const videos = [
-    "https://imagem.speakia.ai/wp-content/uploads/2026/04/videooo.mp4",
-    "https://imagem.speakia.ai/wp-content/uploads/2026/04/videoo.mp4"
+  const images = [
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/image.jpeg",
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/imagem.jpeg"
   ];
 
   return (
@@ -451,15 +451,14 @@ const TestimonialsSection: React.FC = () => {
           VEJA O QUE OS CLIENTES DA SPEAK-AI <br /> FALAM SOBRE O NOSSO PRODUTO!
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {videos.map((src, i) => (
+          {images.map((src, i) => (
             <div
               key={i}
-              className="aspect-[9/16] bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
+              className="aspect-[4/3] bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
             >
-              <video
+              <img
                 src={src}
-                controls
-                playsInline
+                alt={`Depoimento ${i + 1}`}
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
@@ -469,7 +468,6 @@ const TestimonialsSection: React.FC = () => {
     </section>
   );
 };
-
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
   const skills = [
