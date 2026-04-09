@@ -454,11 +454,12 @@ const TestimonialsSection: React.FC = () => {
           {videos.map((src, i) => (
             <div
               key={i}
-              className="aspect-video bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
+              className="aspect-[9/16] bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
             >
               <video
                 src={src}
                 controls
+                playsInline
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
@@ -468,7 +469,6 @@ const TestimonialsSection: React.FC = () => {
     </section>
   );
 };
-
 
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
