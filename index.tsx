@@ -439,15 +439,9 @@ const ShowcaseCarousel: React.FC = () => {
 
 // --- TestimonialsSection ---
 const TestimonialsSection: React.FC = () => {
-  const testimonials = [
-    "VIDEO DA BELLA USANDO PARA MARCA LE QUO",
-    "DONO DA NEW FOUR FALANDO",
-    "DONO DE LOJA ONLINE DE ROUPA FALANDO",
-    "DONO DE RESTAURANTE FALANDO",
-    "INFLUENCER FALANDO QUE USA E FACILITOU A VIDA",
-    "ADVOGADO FALANDO SOBRE ALGUMA NOVA MUDANÇA NA LEI E NAO GOSRTAVA DE APARECER",
-    "DENTISTA QUE PRECISA DIVULGAR SERVIÇO E NÃO TEM TEMPO PARA GRAVAR",
-    "AFILIADO DE PRODUTOS DIGITAIS E FISICOS USANDO A SPEAK.AI PARA VENDER"
+  const videos = [
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/videooo.mp4",
+    "https://imagem.speakia.ai/wp-content/uploads/2026/04/videoo.mp4"
   ];
 
   return (
@@ -456,15 +450,17 @@ const TestimonialsSection: React.FC = () => {
         <h2 className="text-4xl md:text-5xl font-black italic text-center text-white uppercase tracking-tighter">
           VEJA O QUE OS CLIENTES DA SPEAK-AI <br /> FALAM SOBRE O NOSSO PRODUTO!
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {testimonials.map((t, i) => (
-            <div key={i} className="aspect-[3/4] bg-zinc-900 border border-white/5 rounded-2xl p-4 flex flex-col items-center justify-center text-center group hover:border-brand-purple/30 transition-all">
-              <div className="w-12 h-12 rounded-full bg-brand-purple/20 flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-brand-purple" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-              <p className="text-[9px] md:text-[10px] font-black italic uppercase text-zinc-400 group-hover:text-white transition-colors leading-tight">
-                {t}
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {videos.map((src, i) => (
+            <div
+              key={i}
+              className="aspect-video bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden flex items-center justify-center group hover:border-brand-purple/30 transition-all"
+            >
+              <video
+                src={src}
+                controls
+                className="w-full h-full object-cover rounded-2xl"
+              />
             </div>
           ))}
         </div>
@@ -472,6 +468,7 @@ const TestimonialsSection: React.FC = () => {
     </section>
   );
 };
+
 
 // --- SkillsSection ---
 const SkillsSection: React.FC = () => {
